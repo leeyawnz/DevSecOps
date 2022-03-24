@@ -53,6 +53,7 @@ Check if the image is successfully pulled onto your local machine
 $ docker images
 ```
 
-Output:<br>
-REPOSITORY    TAG           IMAGE ID        CREATED       SIZE<br>
-Nginx         latest        98ebf73aba75    4 days ago    109MB
+| Output:                                                             |
+| REPOSITORY  | TAG         | IMAGE ID    | CREATED     | SIZE        |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| Nginx       | latest      | 98ebf73aba75| 4 days ago  | 109MB       |
