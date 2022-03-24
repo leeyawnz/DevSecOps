@@ -115,3 +115,12 @@ We can start a stopped container.
 ```
 docker start <container-id/container-name>
 ```
+We can remove containers.
+```
+docker rm <container-id/container-name>
+```
+> This removes the container if the container is stopped.
+```
+docker rm -f <container-d/container-name>
+```
+> This forcefully removes the container even if it is still running.
