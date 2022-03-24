@@ -60,8 +60,7 @@ Output in Command Line:
 > | ----------- | ----------- | ----------- | ----------- | ----------- |
 > | Nginx       | latest      | 98ebf73aba75| 4 days ago  | 109MB       |
 
-
-
+</br>
 ## Creating and running a Docker Container
 ```
 $ docker run -d nginx:latest
