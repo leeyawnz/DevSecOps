@@ -91,5 +91,5 @@ In the previous output, we can see under the ports section that the container ha
 > | ------ |
 > | 80/tcp |
 This is the port that the container is exposing. To connect to this container, we need to map a localhost port to the container's port
-> Example:
+> Example:\
 > 8080 --> 80
