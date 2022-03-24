@@ -63,12 +63,9 @@ Output in Command line:
 
 ## Creating a Docker Container
 ```
-$ docker run nginx:latest
+$ docker run -d nginx:latest
 ```
-> The command line will hang as the container is running. To prevent that, we need to run the container in detached mode:
-> ```
-> $ docker run -d nginx:latest
-> ```
+> The -d means we are creating and running the container in detached mode. Without detached mode, the container will run and cause the terminal to hang
 
 We can check if the container is created using:
 ```
