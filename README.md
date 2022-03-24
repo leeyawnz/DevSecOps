@@ -1,6 +1,7 @@
 # Docker Documentation
 This is my own personal documentation of the common Docker commands. <br>As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 
+
 ## Setting up Docker
 ```
 $ sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -35,10 +36,12 @@ Check if Docker is installed
 $ sudo docker run hello-world
 ```
 
+
 ## Checking Docker Version
 ```
 $ docker --version
 ```
+
 
 ## Getting an Image (Example: Nginx)
 ```
@@ -53,6 +56,17 @@ Check if the image is successfully pulled onto your local machine
 $ docker images
 ```
 Output in Command line:
->| REPOSITORY  | TAG         | IMAGE ID    | CREATED     | SIZE        |
->| ----------- | ----------- | ----------- | ----------- | ----------- |
->| Nginx       | latest      | 98ebf73aba75| 4 days ago  | 109MB       |
+> | REPOSITORY  | TAG         | IMAGE ID    | CREATED     | SIZE        |
+> | ----------- | ----------- | ----------- | ----------- | ----------- |
+> | Nginx       | latest      | 98ebf73aba75| 4 days ago  | 109MB       |
+
+
+## Creating a Docker Container
+```
+$ docker run nginx:latest
+```
+We can check if the container is created using:
+```
+$ docker ps -a
+```
+> docker ps -a checks the status of all created containers
