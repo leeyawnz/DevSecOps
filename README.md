@@ -81,3 +81,11 @@ Output in Command Line:
 > | CONTAINER ID | IMAGE        | COMMAND                  | CREATED        | STATUS         | PORTS  | NAMES             |
 > | ------------ | ------------ | ------------------------ | -------------- | -------------- | ------ | ----------------- |
 > | 7c16ce4bf5b0 | nginx:latest | "nginx -g 'daemon of..." | 38 seconds ago | 37 seconds ago | 80/tcp | suspicious_synder |
+
+
+</br>
+
+## Exposing Port
+In the previous output, we can see under the ports section that the container has an exposed port
+> | PORTS  |
+> | 80/tcp |
