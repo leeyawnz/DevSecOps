@@ -48,3 +48,11 @@ We can specify the version of the image with a tagname as well
 ```
 $ docker pull nginx:latest
 ```
+Check if the image is successfully pulled onto your local machine
+```
+$ docker images
+```
+
+Output:
+REPOSITORY    TAG           IMAGE ID        CREATED       SIZE
+Nginx         latest        98ebf73aba75    4 days ago    109MB
