@@ -88,4 +88,5 @@ Output in Command Line:
 ## Exposing Port
 In the previous output, we can see under the ports section that the container has an exposed port
 > | PORTS  |
+> | ------ |
 > | 80/tcp |
