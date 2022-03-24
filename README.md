@@ -103,3 +103,15 @@ We can also map multiple localhost ports to a single container port.
 docker run -d -p 3000:80 -p 8080:80 nginx:latest
 ```
 > We can check this by going to localhost:3000 and localhost:8080
+
+</br>
+
+## Managing Containers
+We can stop a running container.
+```
+docker stop <container-id/container-name>
+```
+We can start a stopped container.
+```
+docker start <container-id/container-name>
+```
