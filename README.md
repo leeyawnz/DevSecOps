@@ -97,7 +97,9 @@ To map a localhost port to the container's port, it has to be included in the ru
 ```
 docker run -d -p 8080:80 nginx:latest
 ```
+> We can check this by going to localhost:8080
 We can also map multiple localhost ports to a single container port.
 ```
 docker run -d -p 3000:80 -p 8080:80 nginx:latest
 ```
+> We can check this by going to localhost:3000 and localhost:8080
