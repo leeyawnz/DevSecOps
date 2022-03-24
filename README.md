@@ -32,10 +32,12 @@ $ sudo apt-get update
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
-## Checking Docker
+Check if Docker is installed
 ```
 $ sudo docker run hello-world
 ```
+
+## Checking Docker Version
 ```
 $ docker --version
 ```
