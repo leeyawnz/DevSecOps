@@ -39,3 +39,12 @@ $ sudo docker run hello-world
 ```
 $ docker --version
 ```
+
+## Getting an Image (Example: Nginx)
+```
+$ docker pull nginx
+```
+We can specify the version of the image with a tagname as well
+```
+$ docker pull nginx:latest
+```
