@@ -65,6 +65,11 @@ Output in Command line:
 ```
 $ docker run nginx:latest
 ```
+> The command line will hang as the container is running. To prevent that, we need to run the container in detached mode:
+> ```
+> $ docker run -d nginx:latest
+> ```
+
 We can check if the container is created using:
 ```
 $ docker ps -a
