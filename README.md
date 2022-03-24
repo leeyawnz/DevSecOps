@@ -124,3 +124,8 @@ docker rm <container-id/container-name>
 docker rm -f <container-d/container-name>
 ```
 > This forcefully removes the container even if it is still running.
+We can remove multiple containers as well.
+```
+docker rm $(docker ps -aq)
+docker rm -f $(docker ps -aq)
+```
