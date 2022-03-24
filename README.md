@@ -72,6 +72,7 @@ We can check if the container is created using:
 $ docker ps -a
 ```
 > docker ps -a checks the status of all created containers
+
 Output in Command Line:
 > | CONTAINER ID | IMAGE        | COMMAND                  | CREATED        | STATUS         | PORTS  | NAMES             |
 > | ------------ | ------------ | ------------------------ | -------------- | -------------- | ------ | ----------------- |
