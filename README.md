@@ -141,3 +141,22 @@ docker run --name <name>
 > e.g \
 > docker run --name website \
 > This allows us to better identify what each container does
+
+</br>
+
+## Formatting docker ps Output
+We can format the output so that container infomation are easier to read.
+```
+export FORMAT='ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+```
+```
+docker ps --format=$FORMAT
+```
+Output: \
+ID      a0440e23a60a \
+NAME    website \
+IMAGE   nginx:latest \
+PORTS   0.0.0.0:9000->80/tcp \
+COMMAND "nginx -g 'daemon of..." \
+CREATED 2019-07-24 23:23:25 +0100 BST \
+STATUS  Up About a minute
