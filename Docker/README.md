@@ -197,3 +197,14 @@ docker run --name website-copy --volumes-from website -d -p 8081:80 nginx
 
 ## Dockerfile
 Dockerfile allows use to build our own images. By running the Dockerfile, we can create our own custom images and custom containers.
+
+Dockerfile Demo \
+Create a Dockerfile in your working directory that contains your source code.
+```
+vi Dockerfile
+```
+> Inside the Dockerfile add:
+> ```
+> FROM nginx:latest
+> ADD . /usr/share/nginx/html
+> ```
