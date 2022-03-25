@@ -23,6 +23,7 @@ This is my own personal documentation of the common Docker commands. <br>As most
 >    - [Using Alpine](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#alpine)
 > - [Version Control](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#version-control)
 >    - [Implementing in Dockerfile](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#implementing-in-dockerfile)
+> - [Docker Registries](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-registries)
 
 </br>
 
