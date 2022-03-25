@@ -174,6 +174,7 @@ Volumes allows us to share data, files and folders. \
 We can share files and folders between host and container and also between containers. \
 We can find documentations on where to mount the volumes at.
 
+### Docker volumes (Host <-> Container)
 With the example of Nginx:
 ```
 docker run --name website -v $(pwd):/usr/share/nginx/html:ro -d nginx
