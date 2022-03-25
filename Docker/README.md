@@ -4,7 +4,7 @@ This is my own personal documentation of the common Docker commands. <br>As most
 </br>
 
 ## Table of Contents:
-[Setting up Docker]
+[Setting up Docker](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker)
 
 </br>
 
