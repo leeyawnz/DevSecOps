@@ -173,3 +173,5 @@ With the example of Nginx:
 ```
 docker run --name website -v $(pwd):/usr/share/nginx/html:ro -d nginx
 ```
+> Takes the present working directory and mounting the data onto the nginx container. \
+> Any changes that is made in this pwd, it will reflect in the nginx container as well.
