@@ -30,3 +30,68 @@ terraform version
 Terraform requires Docker as well. To check the Docker Set Up, you can go [here](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker).
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Terraform/README.md#table-of-contents)
+
+</br>
+
+## Terraform in Action
+Create a directory named learn-terraform-docker-container
+```
+mkdir learn-terraform-docker-container
+```
+Navigate into the directory
+```
+cd learn-terraform-docker-container
+```
+Create a file named main.tf
+```
+vi main.tf
+```
+> Copy the following code into the main.tf file
+> ```
+> terraform {
+>   required_providers {
+>     docker = {
+>       source  = "kreuzwerker/docker"
+>       version = "~> 2.13.0"
+>     }
+>   }
+> }
+> 
+> provider "docker" {}
+>
+> resource "docker_image" "nginx" {
+>   name         = "nginx:latest"
+>   keep_locally = false
+> }
+> 
+> resource "docker_container" "nginx" {
+>   image = docker_image.nginx.latest
+>   name  = "tutorial"
+>   ports {
+>     internal = 80
+>     external = 8000
+>   }
+> }
+```
+Initialize the project
+```
+terraform init
+```
+Creating the infrastructure
+```
+terraform apply
+```
+Check if the Docker container has been created
+```
+docker ps -a
+```
+> Can also run [localhost:8000](localhost:8000) to see if webserver is running.
+
+To destroy the created infrastructure,
+```
+terraform destroy
+```
+We can double check that it has been destroyed
+```
+docker ps -a
+```
