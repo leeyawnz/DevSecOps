@@ -121,6 +121,7 @@ We can enter into a docker container with the following command:
 docker exec -it <container-id/container-name> /bin/bash
 ```
 > This command is useful in checking if the docker container was properly configured
+
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
 
 </br>
@@ -143,6 +144,7 @@ We can also map multiple localhost ports to a single container port.
 docker run -d -p 3000:80 -p 8080:80 nginx:latest
 ```
 > We can check this by going to localhost:3000 and localhost:8080
+
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
 
 </br>
@@ -225,6 +227,7 @@ With the example of Nginx:
 docker run --name website-copy --volumes-from website -d -p 8081:80 nginx
 ```
 > The command above takes any changes from the website container and is modified in the website-copy container.
+
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
 
 </br>
@@ -290,6 +293,7 @@ When building an image, Docker is able to utilize caching to check for differenc
 ### Using Alpine
 We can utilize the alpine version of an image to make it even more lightweight and this would build images quicker as well. We can find the alpine version in the relevant official DockerHub images. This is important when using Dockerfile to build your images.
 > Comparing nginx:latest and nginx:alpine images, the difference in the image size is almost 105MB!
+
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
 
 </br>
@@ -302,4 +306,5 @@ To implement version control for your Dockerfile, make sure that you use the ful
 > FROM node:10.16.1-alpine \
 >  \
 > By specifying the specific version in your Dockerfile, you would be able to know for which base image you application has no problems running on. If you constantly use the node:latest tag, if the newest version of node is not compatible with your existing code base, you would not know which node version to revert to.
+
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
