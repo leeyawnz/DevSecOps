@@ -152,7 +152,7 @@ export FORMAT='ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports
 ```
 docker ps --format=$FORMAT
 ```
-| Output: |                               |
+
 | ID      | a0440e23a60a                  |
 | NAME    | website                       |
 | IMAGE   | nginx:latest                  |
