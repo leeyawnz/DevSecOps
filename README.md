@@ -152,17 +152,11 @@ export FORMAT='ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports
 ```
 docker ps --format=$FORMAT
 ```
-Output: \
+| Output: |                               |
 | ID      | a0440e23a60a                  |
-| ------- | ----------------------------- |
 | NAME    | website                       |
-| ------- | ----------------------------- |
 | IMAGE   | nginx:latest                  |
-| ------- | ----------------------------- |
 | PORTS   | 0.0.0.0:9000->80/tcp.         |
-| ------- | ----------------------------- |
 | COMMAND | "nginx -g 'daemon of..."      |
-| ------- | ----------------------------- |
 | CREATED | 2019-07-24 23:23:25 +0100 BST |
-| ------- | ----------------------------- |
 | STATUS  | Up About a minute             |
