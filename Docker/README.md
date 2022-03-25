@@ -172,7 +172,7 @@ docker ps --format=$FORMAT
 ## Docker Volumes
 Volumes allows us to share data, files and folders. We can share files and folders between host and container and also between containers. We can find documentations on where to mount the volumes at DockerHub.
 
-### Docker volumes (Host <-> Container)
+### Host <-> Container Volumes
 With the example of Nginx:
 ```
 docker run --name website -v $(pwd):/usr/share/nginx/html:ro -d nginx
@@ -185,3 +185,10 @@ docker run --name website -v $(pwd):/usr/share/nginx/html:ro -d nginx
 > ```
 > docker run --name website -v $(pwd):/usr/share/nginx/html -d nginx
 > ```
+
+### Container <-> Container Volumes
+With the example of Nginx:
+```
+docker run --name website-copy --volumes-from website -d -p 8081:80 nginx
+```
+> The command above takes any changes from the website container and is modified in the website-copy container.
