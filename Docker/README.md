@@ -321,3 +321,10 @@ docker tag website:latest website:version-1
 > If version-2 exists, the latest tag will have the same image id as version-2 and so on. The latest tag will point to the latest version
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
+
+</br>
+
+## Docker Registries
+Docker Registries is a highly scalable server side application that stores and distributes Docker images. It is used in the CI/CD Pipeline.
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
