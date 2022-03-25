@@ -16,7 +16,13 @@ This is my own personal documentation of the common Docker commands. <br>As most
 >    - [Host <-> Container](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#host---container-volumes)
 >    - [Container <-> Container Volumes](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#container---container-volumes)
 > - [Building Images Using Dockerfile Volumes](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#build-images-using-dockerfile)
+>    - [Creating a Dockerfile]()
+>    - [Dockerfile Syntax]()
+>    - [Dockerfile Demo](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#dockerfile-demo)
+>    - [Caching and Layers](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#caching-and-layers)
+>    - [Using Alpine](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#alpine)
 > - [Version Control](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#version-control)
+>    - [Implementing in Dockerfile](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#implementing-in-dockerfile)
 
 </br>
 
@@ -216,11 +222,11 @@ docker run --name website-copy --volumes-from website -d -p 8081:80 nginx
 ## Build Images Using Dockerfile
 Dockerfile allows use to build our own images. By running the Dockerfile, we can create our own custom images and custom containers.
 
-Creating a Dockerfile
+### Creating a Dockerfile
 ```
 vi Dockerfile
 ```
-Dockerfile syntax
+### Dockerfile Syntax
 > FROM - mandatory syntax for creating an image \
 > ADD/COPY - adds or copies files from a directory to the container \
 > WORKDIR - creates a directory and switches into the newly created directory \
@@ -271,7 +277,7 @@ docker build -t website:latest .
 ### Caching and Layers
 When building an image, Docker is able to utilize caching to check for differences in the new image you're building. So bear in mind when buildng an image, think about what changes and what does not and utilize caching so that building an image would be faster.
 
-### Alpine
+### Using Alpine
 We can utilize the alpine version of an image to make it even more lightweight and this would build images quicker as well. We can find the alpine version in the relevant official DockerHub images. This is important when using Dockerfile to build your images.
 > Comparing nginx:latest and nginx:alpine images, the difference in the image size is almost 105MB!
 
