@@ -86,6 +86,7 @@ We can enter into a docker container with the following command:
 ```
 docker exec -it <container-id/container-name> /bin/bash
 ```
+> This command is useful in checking if the docker container was properly configured
 
 </br>
 
