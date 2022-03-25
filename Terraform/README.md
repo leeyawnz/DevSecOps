@@ -6,6 +6,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 
 ## Table of Contents:
 > - [Setting Up Terraform](https://github.com/leeyawnz/DevSecOps/blob/main/Terraform/README.md#setting-up-terraform)
+> - [Terraform in Action](https://github.com/leeyawnz/DevSecOps/blob/main/Terraform/README.md#terraform-in-action)
 
 </br>
 
