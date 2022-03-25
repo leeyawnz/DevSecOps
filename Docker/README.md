@@ -314,9 +314,10 @@ docker tag website:latest website:version-1
 ```
 > This command actually creates 2 images of similar image ids with different tags \
 > e.g  \
+> \
 > website:latest \
 > website:version-1 \
 > \
-> If version-2 exists, the latest tag will have the same image id as version-2 and so on.
+> If version-2 exists, the latest tag will have the same image id as version-2 and so on. The latest tag will point to the latest version
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
