@@ -204,6 +204,22 @@ vi Dockerfile
 ```
 
 ### Dockerfile Demo
+Create an directory called website
+```
+mkdir website
+```
+```
+cd website
+```
+Create an index.html file in your working directory
+```
+vi index.html
+```
+> Add this in your index.html file
+> ```
+> <h1> Hello World </h1>
+> ```
+
 Create a Dockerfile in your working directory that contains your source code.
 ```
 vi Dockerfile
