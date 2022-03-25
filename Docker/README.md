@@ -4,16 +4,16 @@ This is my own personal documentation of the common Docker commands. <br>As most
 </br>
 
 ## Table of Contents:
-> - [Setting up Docker](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker) \
-> - [Checking Docker Version](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#checking-docker-version) \
-> - [Getting a Docker Image](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#getting-a-docker-image-example-nginx) \
-> - [Creating and Running a Docker Container](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#creating-and-running-a-docker-container) \
-> - [Exposed Container Ports](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#exposed-container-port) \
-> - [Managing Docker Containers](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#managing-docker-containers) \
-> - [Naming Docker Containers](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#naming-docker-containers) \
-> - [Formatting docker ps Output](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#formatting-docker-ps-output) \
-> - [Docker Volumes](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-volumes) \
-> - [Building Images Using Dockerfile](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#build-images-using-dockerfile) \
+> - [Setting up Docker](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker)
+> - [Checking Docker Version](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#checking-docker-version)
+> - [Getting a Docker Image](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#getting-a-docker-image-example-nginx)
+> - [Creating and Running a Docker Container](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#creating-and-running-a-docker-container)
+> - [Exposed Container Ports](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#exposed-container-port)
+> - [Managing Docker Containers](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#managing-docker-containers)
+> - [Naming Docker Containers](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#naming-docker-containers)
+> - [Formatting docker ps Output](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#formatting-docker-ps-output)
+> - [Docker Volumes](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-volumes)
+> - [Building Images Using Dockerfile](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#build-images-using-dockerfile)
 > - [Version Control](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#version-control)
 
 </br>
