@@ -308,4 +308,15 @@ To implement version control for your Dockerfile, make sure that you use the ful
 >  \
 > By specifying the specific version in your Dockerfile, you would be able to know for which base image you application has no problems running on. If you constantly use the node:latest tag, if the newest version of node is not compatible with your existing code base, you would not know which node version to revert to.
 
+### Implementing in Docker tags
+```
+docker tag website:latest website:version-1
+```
+> This command actually creates 2 images of similar image ids with different tags \
+> e.g  \
+> website:latest \
+> website:version-1 \
+> \
+> If version-2 exists, the latest tag will have the same image id as version-2 and so on.
+
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
