@@ -28,6 +28,7 @@ This is my own personal documentation of the common Docker commands. <br>As most
 > - [Debugging Docker Containers](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#debugging-docker-containers)
 >    - [Docker Inspect](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-inspect)
 >    - [Docker Logs](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-logs)
+>    - [Docker Exec]()
 
 </br>
 
@@ -120,12 +121,6 @@ Output in Command Line:
 > | CONTAINER ID | IMAGE        | COMMAND                  | CREATED        | STATUS         | PORTS  | NAMES             |
 > | ------------ | ------------ | ------------------------ | -------------- | -------------- | ------ | ----------------- |
 > | 7c16ce4bf5b0 | nginx:latest | "nginx -g 'daemon of..." | 38 seconds ago | 37 seconds ago | 80/tcp | suspicious_synder |
-
-We can enter into a Docker container with the following command:
-```
-docker exec -it <container-id/container-name> /bin/bash
-```
-> This command is useful in checking if the Docker container was properly configured
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
 
@@ -374,5 +369,12 @@ Using the docker logs command, we can gain access on all activities of a contain
 > ```
 > docker logs <container-id/container-name>
 > ```
+
+### Docker Exec
+Using this command, we can gain access into the container. This allows us to check if a Docker container has been properly configured.
+```
+docker exec -it <container-id/container-name> /bin/bash
+```
+> If an error occurs, we can use docker inspect and under cmd, we can see the shell type
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
