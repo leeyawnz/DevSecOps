@@ -251,5 +251,4 @@ docker build -t website:latest .
 > Builds an image with name and tag of website:latest using the Dockerfile in the pwd (reference by the dot).
 
 ### Caching and Layers
-When building an image, Docker is able to utilize caching to check for differences in the new image you're building. \
-So bear in mind when buildng an image, think about what changes and what does not and utilize caching so that building an image would be faster.
+When building an image, Docker is able to utilize caching to check for differences in the new image you're building. So bear in mind when buildng an image, think about what changes and what does not and utilize caching so that building an image would be faster.
