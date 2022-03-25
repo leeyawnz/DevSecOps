@@ -6,7 +6,7 @@ This is my own personal documentation of the common Docker commands. <br>As most
 ## Table of Contents:
 > [Setting up Docker](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker) \
 > [Checking Docker Version](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#checking-docker-version) \
-> [Getting a Docker Image]() \
+> [Getting a Docker Image](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#getting-a-docker-image-example-nginx) \
 > [Creating and Running a Docker Container]() \
 > [Exposed Container Ports]() \
 > [Managing Docker Containers]() \
