@@ -72,7 +72,7 @@ vi main.tf
 >     external = 8000
 >   }
 > }
-```
+> ```
 Initialize the project
 ```
 terraform init
