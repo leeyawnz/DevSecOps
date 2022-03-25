@@ -202,6 +202,18 @@ Creating a Dockerfile
 ```
 vi Dockerfile
 ```
+Dockerfile syntax
+> FROM - mandatory syntax for creating an image \
+> ADD/COPY - adds or copies files from a directory to the container \
+> WORKDIR - creates a directory and switches into the newly created directory \
+> RUN - command triggers while building the docker image \
+> CMD - command triggers after the image has been built and launched, can be overwritten \
+> ENTRYPOINT - default command that will run regardless, cannot be overwritten \
+> \
+> ENTRYPOINT vs CMD \
+> e.g \
+> docker ps -a \
+> We can imagine the ENTRYPOINT command as the "docker" portion and the CMD command as the "ps -a" which can be changed
 
 ### Dockerfile Demo
 Create an directory called website
@@ -237,3 +249,7 @@ Building the Image from Dockerfile
 docker build -t website:latest .
 ```
 > Builds an image with name and tag of website:latest using the Dockerfile in the pwd (reference by the dot).
+
+### Caching and Layers
+When building an image, Docker is able to utilize caching to check for differences in the new image you're building. \
+So bear in mind when buildng an image, think about what changes and what does not and utilize caching so that building an image would be faster.
