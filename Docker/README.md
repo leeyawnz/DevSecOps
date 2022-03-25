@@ -25,9 +25,9 @@ This is my own personal documentation of the common Docker commands. <br>As most
 >    - [Implementing in Dockerfile](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#implementing-in-dockerfile)
 > - [Docker Registries](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-registries)
 >    - [Pushing Images to Docker Hub](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#pushing-images-to-docker-hub)
-> - [Debugging Docker Container]()
->    - [Docker Inspect]()
->    - [Docker Logs]()
+> - [Debugging Docker Containers](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#debugging-docker-containers)
+>    - [Docker Inspect](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-inspect)
+>    - [Docker Logs](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-logs)
 
 </br>
 
