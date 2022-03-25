@@ -270,4 +270,5 @@ Docker is one of the tools used in the CI/CD pipeline to provide value as quick 
 
 To implement version control for your Dockerfile, make sure that you use the full version tagname after your FROM syntax.
 > FROM node:10.16.1-alpine \
+>  \
 > By specifying the specific version in your Dockerfile, you would be able to know for which base image you application has no problems running on. If you constantly use the node:latest tag, if the newest version of node is not compatible with your existing code base, you would not know which node version to revert to.
