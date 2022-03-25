@@ -63,6 +63,12 @@ Output in Command Line:
 > | ----------- | ----------- | ----------- | ----------- | ----------- |
 > | Nginx       | latest      | 98ebf73aba75| 4 days ago  | 109MB       |
 
+We can also remove images.
+```
+docker rmi -f <image-id>
+```
+> Using -f forcefully removes the image
+
 </br>
 
 ## Creating and running a Docker Container
