@@ -93,7 +93,7 @@ We can also remove images.
 ```
 docker rmi -f <image-id>
 ```
-> Using -f forcefully removes the image
+> Using -f forcefully removes the image \
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
 
 </br>
