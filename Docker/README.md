@@ -10,8 +10,8 @@ This is my own personal documentation of the common Docker commands. <br>As most
 > - [Creating and Running a Docker Container](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#creating-and-running-a-docker-container)
 > - [Exposed Container Ports](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#exposed-container-port)
 > - [Managing Docker Containers](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#managing-docker-containers)
-> - [Naming Docker Containers](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#naming-docker-containers)
-> - [Formatting docker ps Output](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#formatting-docker-ps-output)
+>    - [Naming Docker Containers](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#naming-docker-containers)
+>    - [Formatting docker ps Output](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#formatting-docker-ps-output)
 > - [Docker Volumes](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-volumes)
 > - [Building Images Using Dockerfile](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#build-images-using-dockerfile)
 > - [Version Control](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#version-control)
@@ -130,8 +130,6 @@ docker run -d -p 3000:80 -p 8080:80 nginx:latest
 ```
 > We can check this by going to localhost:3000 and localhost:8080
 
-</br>
-
 ## Managing Docker Containers
 We can stop a running container.
 ```
@@ -157,9 +155,7 @@ docker rm $(docker ps -aq)
 docker rm -f $(docker ps -aq)
 ```
 
-</br>
-
-## Naming Docker Containers
+### Naming Docker Containers
 We can name containers including the --name following command:
 ```
 docker run --name <name>
@@ -170,7 +166,7 @@ docker run --name <name>
 
 </br>
 
-## Formatting docker ps Output
+### Formatting docker ps Output
 We can format the output so that container infomation are easier to read on the command line.
 ```
 export FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
