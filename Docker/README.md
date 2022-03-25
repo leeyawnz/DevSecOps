@@ -61,7 +61,8 @@ docker --version
 
 </br>
 
-## Getting a Docker Image (Example: Nginx)
+## Getting a Docker Image
+Here we are using Nginx as an example.
 ```
 docker pull nginx
 ```
