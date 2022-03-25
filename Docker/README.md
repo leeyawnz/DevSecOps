@@ -13,7 +13,9 @@ This is my own personal documentation of the common Docker commands. <br>As most
 >    - [Naming Docker Containers](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#naming-docker-containers)
 >    - [Formatting docker ps Output](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#formatting-docker-ps-output)
 > - [Docker Volumes](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-volumes)
-> - [Building Images Using Dockerfile](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#build-images-using-dockerfile)
+>    - [Host <-> Container]()
+>    - [Container <-> Container Volumes]()
+> - [Building Images Using Dockerfile Volumes](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#build-images-using-dockerfile)
 > - [Version Control](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#version-control)
 
 </br>
@@ -164,8 +166,6 @@ docker run --name <name>
 > e.g \
 > docker run --name website \
 > This allows us to better identify what each container does
-
-</br>
 
 ### Formatting docker ps Output
 We can format the output so that container infomation are easier to read on the command line.
