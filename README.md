@@ -166,6 +166,6 @@ docker ps --format=$FORMAT
 
 ## Docker Volumes
 Volumes allows us to share data, files and folders. \
-We can share files and folders between host and container and also between containers. \
+We can share files and folders between host and container and also between containers.
 
 hello world
