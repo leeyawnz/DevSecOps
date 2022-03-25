@@ -82,6 +82,10 @@ Output in Command Line:
 > | ------------ | ------------ | ------------------------ | -------------- | -------------- | ------ | ----------------- |
 > | 7c16ce4bf5b0 | nginx:latest | "nginx -g 'daemon of..." | 38 seconds ago | 37 seconds ago | 80/tcp | suspicious_synder |
 
+We can enter into a docker container with the following command:
+```
+docker exec -it <container-id/container-name> /bin/bash
+```
 
 </br>
 
