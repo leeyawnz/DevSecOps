@@ -192,3 +192,8 @@ With the example of Nginx:
 docker run --name website-copy --volumes-from website -d -p 8081:80 nginx
 ```
 > The command above takes any changes from the website container and is modified in the website-copy container.
+
+</br>
+
+## Dockerfile
+Dockerfile allows use to build our own images. By running the Dockerfile, we can create our own custom images and custom containers.
