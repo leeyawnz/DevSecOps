@@ -161,3 +161,11 @@ docker ps --format=$FORMAT
 | COMMAND | "nginx -g 'daemon of..."      |
 | CREATED | 2019-07-24 23:23:25 +0100 BST |
 | STATUS  | Up About a minute             |
+
+</br>
+
+## Docker Volumes
+Volumes allows us to share data, files and folders. \
+We can share files and folders between host and container and also between containers.\
+
+hello world
