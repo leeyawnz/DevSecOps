@@ -255,4 +255,4 @@ When building an image, Docker is able to utilize caching to check for differenc
 
 ### Alpine
 We can utilize the alpine version of an image to make it even more lightweight and this would build images quicker as well. We can find the alpine version in the relevant official DockerHub images. This is important when using Dockerfile to build your images.
-> Comparing nginx:latest and nginx:alpine, the difference in the image size is almost 105MB!
+> Comparing nginx:latest and nginx:alpine images, the difference in the image size is almost 105MB!
