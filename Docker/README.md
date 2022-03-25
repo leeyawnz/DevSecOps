@@ -117,11 +117,11 @@ Output in Command Line:
 > | ------------ | ------------ | ------------------------ | -------------- | -------------- | ------ | ----------------- |
 > | 7c16ce4bf5b0 | nginx:latest | "nginx -g 'daemon of..." | 38 seconds ago | 37 seconds ago | 80/tcp | suspicious_synder |
 
-We can enter into a docker container with the following command:
+We can enter into a Docker container with the following command:
 ```
 docker exec -it <container-id/container-name> /bin/bash
 ```
-> This command is useful in checking if the docker container was properly configured
+> This command is useful in checking if the Docker container was properly configured
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
 
@@ -245,7 +245,7 @@ vi Dockerfile
 > FROM - mandatory syntax for creating an image \
 > ADD/COPY - adds or copies files from a directory to the container \
 > WORKDIR - creates a directory and switches into the newly created directory \
-> RUN - command triggers while building the docker image \
+> RUN - command triggers while building the Docker image \
 > CMD - command triggers after the image has been built and launched, can be overwritten \
 > ENTRYPOINT - default command that will run regardless, cannot be overwritten \
 > \
@@ -293,7 +293,7 @@ docker build -t website:latest .
 When building an image, Docker is able to utilize caching to check for differences in the new image you're building. So bear in mind when buildng an image, think about what changes and what does not and utilize caching so that building an image would be faster.
 
 ### Using Alpine
-We can utilize the alpine version of an image to make it even more lightweight and this would build images quicker as well. We can find the alpine version in the relevant official DockerHub images. This is important when using Dockerfile to build your images.
+We can utilize the alpine version of an image to make it even more lightweight and this would build images quicker as well. We can find the alpine version in the relevant official Docker Hub images. This is important when using Dockerfile to build your images.
 > Comparing nginx:latest and nginx:alpine images, the difference in the image size is almost 105MB!
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
@@ -334,5 +334,18 @@ Docker Registry Providers:
 - Docker Hub
 - quay.io
 - Amazon ECR
+
+### Pushing Images to Docker Hub
+We can store both private and public images here.
+
+First, we need to create an account on Docker Hub and create a new repository at the Docker Hub official website.
+
+After creating a repository, we will need to sign in on the terminal before using the Docker command provided to push an image to the Docker repository.
+```
+docker login
+```
+```
+docker push username/repo-name:tagname
+```
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
