@@ -229,9 +229,11 @@ vi Dockerfile
 > FROM nginx:latest
 > ADD . /usr/share/nginx/html
 > ```
+> The FROM command is the base image of the container \
+> The ADD command adds all files from the host's pwd (reference with the dot) into the container's /usr/share/nginx/html directory
 
 Building the Image from Dockerfile
 ```
 docker build -t website:latest .
 ```
-> Builds an image with name and tag of website:latest from Dockerfile in the pwd (reference by the dot)
+> Builds an image with name and tag of website:latest using the Dockerfile in the pwd (reference by the dot)
