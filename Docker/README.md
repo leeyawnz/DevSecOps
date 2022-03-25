@@ -25,6 +25,9 @@ This is my own personal documentation of the common Docker commands. <br>As most
 >    - [Implementing in Dockerfile](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#implementing-in-dockerfile)
 > - [Docker Registries](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-registries)
 >    - [Pushing Images to Docker Hub](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#pushing-images-to-docker-hub)
+> - [Debugging Docker Container]()
+>    - [Docker Inspect]()
+>    - [Docker Logs]()
 
 </br>
 
@@ -350,5 +353,26 @@ docker login
 ```
 docker push username/repo-name:tagname
 ```
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
+
+</br>
+
+## Debugging Docker Containers
+### Docker Inspect
+Using the docker inspect command, we can gain access to informmation of a specific container.
+```
+docker inspect <container-id/container-name>
+```
+> We can pass the command through a grep pipe to find the specific information that you may need as well
+> ```
+> docker inspect <container-id/container-name> | grep info
+> ```
+
+### Docker Logs
+Using the docker logs command, we can gain access on all activities of a container. We can link this to the ELK stack as well.
+> ```
+> docker logs <container-id/container-name>
+> ```
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
