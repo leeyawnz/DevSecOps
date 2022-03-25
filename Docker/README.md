@@ -326,6 +326,13 @@ docker tag website:latest website:version-1
 </br>
 
 ## Docker Registries
-Docker Registries is a highly scalable server side application that stores and distributes Docker images. It is used in the CI/CD Pipeline.
+Docker Registries is a highly scalable server side application that stores and distributes Docker images. It is used in the CI/CD Pipeline. 
+
+There are private and public Docker Registries. To maintain privacy, we can use private registries. Else, we can store our images publicly.
+
+Docker Registry Providers:
+- Docker Hub
+- quay.io
+- Amazon ECR
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
