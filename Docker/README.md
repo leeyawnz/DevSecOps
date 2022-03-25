@@ -4,11 +4,11 @@ This is my own personal documentation of the common Docker commands. <br>As most
 </br>
 
 ## Table of Contents:
-[Setting up Docker](#Setting up Docker)
+[Setting up Docker]
 
 </br>
 
-[## Setting up Docker](#Setting up Docker)
+## Setting up Docker
 ```
 sudo apt-get remove docker docker-engine docker.io containerd runc
 ```
