@@ -203,7 +203,7 @@ Creating a Dockerfile
 vi Dockerfile
 ```
 
-Dockerfile Demo \
+### Dockerfile Demo
 Create a Dockerfile in your working directory that contains your source code.
 ```
 vi Dockerfile
