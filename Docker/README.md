@@ -24,6 +24,7 @@ This is my own personal documentation of the common Docker commands. <br>As most
 > - [Version Control](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#version-control)
 >    - [Implementing in Dockerfile](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#implementing-in-dockerfile)
 > - [Docker Registries](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-registries)
+>    - [Pushing Images to Docker Hub](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#pushing-images-to-docker-hub)
 
 </br>
 
