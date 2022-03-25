@@ -81,17 +81,20 @@ Creating the infrastructure
 ```
 terraform apply
 ```
-Check if the Docker container has been created
-```
-docker ps -a
-```
+> Check if the Docker container has been created
+> ```
+> docker ps -a
+> ```
+> \
 > Can also run [localhost:8000](localhost:8000) to see if webserver is running.
 
-To destroy the created infrastructure,
+Destorying the infrastructure
 ```
 terraform destroy
 ```
-We can double check that it has been destroyed
-```
-docker ps -a
-```
+> We can check that the Docker container has been destroyed
+> ```
+> docker ps -a
+> ```
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Terraform/README.md#table-of-contents)
