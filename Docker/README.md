@@ -5,7 +5,6 @@ This is my own personal documentation of the common Docker commands. <br>As most
 
 ## Table of Contents:
 > - [Setting up Docker](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker)
-> - [Checking Docker Version](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#checking-docker-version)
 > - [Getting a Docker Image](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#getting-a-docker-image)
 > - [Creating and Running a Docker Container](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#creating-and-running-a-docker-container)
 > - [Exposed Container Ports](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#exposed-container-port)
@@ -62,15 +61,10 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
-Check if Docker is installed.
+Check if Docker is installed by running the command below or by checking the version.
 ```
 sudo docker run hello-world
 ```
-[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
-
-</br>
-
-## Checking Docker Version
 ```
 docker --version
 ```
