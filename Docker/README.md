@@ -8,7 +8,7 @@ This is my own personal documentation of the common Docker commands. <br>As most
 > [Checking Docker Version](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#checking-docker-version) \
 > [Getting a Docker Image](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#getting-a-docker-image-example-nginx) \
 > [Creating and Running a Docker Container](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#creating-and-running-a-docker-container) \
-> [Exposed Container Ports]() \
+> [Exposed Container Ports](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#exposed-container-port) \
 > [Managing Docker Containers]() \
 > [Naming Docker Containers]() \
 > [Formatting docker ps Output]()
