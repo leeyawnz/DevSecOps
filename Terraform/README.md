@@ -5,7 +5,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 </br>
 
 ## Table of Contents:
-> - [helloworld]()
+> - [Setting Up Terraform]()
 
 </br>
 
@@ -27,4 +27,4 @@ Check if Terraform is successfully installed:
 terraform version
 ```
 
-Terraform requires Docker as well. To check the Docker Set Up, you can go [here](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker) 
+Terraform requires Docker as well. To check the Docker Set Up, you can go [here](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker).
