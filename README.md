@@ -130,3 +130,14 @@ We can remove multiple containers as well.
 docker rm $(docker ps -aq)
 docker rm -f $(docker ps -aq)
 ```
+
+</br>
+
+## Naming Containers
+We can name containers including the --name following command:
+```
+docker run --name <name>
+```
+> e.g \
+> docker run --name website \
+> This allows us to better identify what each container does
