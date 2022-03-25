@@ -179,5 +179,7 @@ With the example of Nginx:
 docker run --name website -v $(pwd):/usr/share/nginx/html:ro -d nginx
 ```
 > Takes the present working directory and mounting the data onto the nginx container. \
-> Any changes that is made in this pwd, it will reflect in the nginx container also. |
-> We can substitute the $(pwd) with an absolute path on the host machine as well.
+> Any changes that is made in this pwd, it will reflect in the nginx container also. \
+> We can substitute the $(pwd) with an absolute path on the host machine as well. \
+> The :ro command means read-only, so you are unable to make any volume modifications from within the container.\
+> By removing the :ro command, any modifications made from within the container's directory where the volume is mounted, will be reflected in the host machine's volume as well.
