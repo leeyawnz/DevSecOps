@@ -252,3 +252,7 @@ docker build -t website:latest .
 
 ### Caching and Layers
 When building an image, Docker is able to utilize caching to check for differences in the new image you're building. So bear in mind when buildng an image, think about what changes and what does not and utilize caching so that building an image would be faster.
+
+### Alpine
+We can utilize the alpine version of an image to make it even more lightweight and this would build images quicker as well. We can find the alpine version in the relevant official DockerHub images. This is important when using Dockerfile to build your images.
+> Comparing nginx:latest and nginx:alpine, the difference in the image size is almost 105MB!
