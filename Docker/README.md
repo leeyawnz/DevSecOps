@@ -268,7 +268,7 @@ We can utilize the alpine version of an image to make it even more lightweight a
 ## Version Control
 Docker is one of the tools used in the CI/CD pipeline to provide value as quick as possible to end-users. The most important thing about DevOps is Version Control. If an error is detected, version control kicks in to rollback to the last working version so that users will still be able to use the application without any issues. So it comes as no surprise that Docker has its form of Version Control.
 
-### Implementing Dockerfile
+### Implementing in Dockerfile
 To implement version control for your Dockerfile, make sure that you use the full version tagname after your image name after the FROM syntax.
 > FROM node:10.16.1-alpine \
 >  \
