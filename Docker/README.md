@@ -288,7 +288,9 @@ Building the Image from Dockerfile
 ```
 docker build -t website:latest .
 ```
-> Builds an image with name and tag of website:latest using the Dockerfile in the pwd (reference by the dot).
+> Builds an image with name and tag of website:latest using the Dockerfile in the pwd (reference by the dot). \
+> \
+> This built image will have all the files from your local machine being pushed inside, so whoever has this image would have access to the files that you have built.
 
 ### Caching and Layers
 When building an image, Docker is able to utilize caching to check for differences in the new image you're building. So bear in mind when buildng an image, think about what changes and what does not and utilize caching so that building an image would be faster.
