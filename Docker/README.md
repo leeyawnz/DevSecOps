@@ -4,7 +4,17 @@ This is my own personal documentation of the common Docker commands. <br>As most
 </br>
 
 ## Table of Contents:
-[Setting up Docker](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker)
+> [Setting up Docker](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker) \
+> [Checking Docker Version]() \
+> [Getting a Docker Image]() \
+> [Creating and Running a Docker Container]() \
+> [Exposed Container Ports]() \
+> [Managing Docker Containers]() \
+> [Naming Docker Containers]() \
+> [Formatting docker ps Output]()
+> [Docker Volumes]() \
+> [Building Images Using Dockerfile]() \
+> [Version Control]()
 
 </br>
 
@@ -51,7 +61,7 @@ docker --version
 
 </br>
 
-## Getting an Image (Example: Nginx)
+## Getting a Docker Image (Example: Nginx)
 ```
 docker pull nginx
 ```
@@ -101,7 +111,7 @@ docker exec -it <container-id/container-name> /bin/bash
 
 </br>
 
-## Exposing Port
+## Exposed Container Port
 In the previous output, we can see under the ports section that the container has an exposed port.
 > | PORTS  |
 > | ------ |
@@ -122,7 +132,7 @@ docker run -d -p 3000:80 -p 8080:80 nginx:latest
 
 </br>
 
-## Managing Containers
+## Managing Docker Containers
 We can stop a running container.
 ```
 docker stop <container-id/container-name>
@@ -149,7 +159,7 @@ docker rm -f $(docker ps -aq)
 
 </br>
 
-## Naming Containers
+## Naming Docker Containers
 We can name containers including the --name following command:
 ```
 docker run --name <name>
@@ -206,7 +216,7 @@ docker run --name website-copy --volumes-from website -d -p 8081:80 nginx
 
 </br>
 
-## Dockerfile
+## Build Images Using Dockerfile
 Dockerfile allows use to build our own images. By running the Dockerfile, we can create our own custom images and custom containers.
 
 Creating a Dockerfile
