@@ -327,6 +327,62 @@ We can utilize the alpine version of an image to make it even more lightweight a
 </br>
 
 ## Docker Compose
+To see how docker compose works, we must first see how the basic docker run command looks like.
+```
+docker run -d --name webserver -p 8080:80 --net web-network -v $(pwd):/usr/share/nginx/html nginx:latest
+```
+If you need to run multiple containers, you would require to type the commands multiple times and may also run into typo errors and this is where docker compose comes in.
+
+To start, we need to download the Docker Compose package
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
+```
+sudo chmod +x /usr/local/bin/docker-compose
+```
+```
+docker-compose --version
+```
+
+We can now use Docker Compose. We can see Docker Compose in action by first creating a docker-compose.yml file.
+```
+vi docker-compose.yml
+```
+Inside the docker-compose.yml file, we can type
+```
+version: "3.9"
+
+services:
+  webserver:
+    image: "nginx:latest"
+    volume:
+      - .:/usr/share/nginx/html
+    ports:
+      - "8080:80"
+    networks:
+      - web_network
+  redis:
+    image: "redis:alpine"
+    
+networks:
+  web_network:
+    driver: none
+```
+> Using this docker-compose.yml format, we can deploy multiple Docker containers by simply adding more containers under the services section.
+
+To execute this docker-compose.yml file, we can execute this command.
+```
+docker-compose up
+```
+> We can run multiple docker-compose.yml file using
+> ```
+> docker-compose -f docker-compose.yml -f docker-compose-admin.yml up -d
+> ```
+
+To remove containers relating to that specific docker-compose.yml, we can run this command
+```
+docker-compose down
+```
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
 
