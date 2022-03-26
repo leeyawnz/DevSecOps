@@ -5,6 +5,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 ## Table of Contents:
 > - [Setting Up Ansible]()
 > - [ssh-keygen]()
+>   - [ssh Demo]()
 
 </br>
 
@@ -26,9 +27,9 @@ sudo apt install ansible
 </br>
 
 ## ssh-keygen
-Taking advantage of SSH, we can access different servers remotely to configure them.
+Taking advantage of SSH, we can access different servers remotely to configure them from a controller server.
 
-### ssh demo
+### ssh Demo
 #### 1. Setting up our instances
 To see this in action, we can first create 3 instances in AWS. After creating the 3 instances,run all 3 instances on 3 separate terminals.
 
