@@ -129,7 +129,7 @@ Inside this inventory file, we can group servers together.
 > ```
 > From here, we can see that we have 3 server groups.
 
-We can also have nested groups using ":childen" in the [].
+We can also have nested groups using ":childen" in the [ ].
 > ```
 > [atlanta]
 > host1
