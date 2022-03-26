@@ -125,3 +125,5 @@ Inside this inventory file, we can group servers together.
 > 
 > [db]
 > dbserver1
+> ```
+> From here, we can see that we have 3 server groups.
