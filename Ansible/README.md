@@ -130,6 +130,7 @@ We can create an inventory file easily.
 ```
 vi inventory
 ```
+> If there is no inventory file created and specified, Ansible will go to this file /etc/ansible/host and use it as a default inventory file.
 ### Inventory Groups
 Inside this inventory file, we can group servers together.
 ```
