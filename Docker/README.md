@@ -14,12 +14,14 @@ This is my own personal documentation of the common Docker commands. <br>As most
 > - [Docker Volumes](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-volumes)
 >    - [Host <-> Container](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#host---container-volumes)
 >    - [Container <-> Container Volumes](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#container---container-volumes)
+> - [Docker Network]()
 > - [Building Images Using Dockerfile Volumes](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#build-images-using-dockerfile)
 >    - [Creating a Dockerfile](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#creating-a-dockerfile)
 >    - [Dockerfile Syntax](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#dockerfile-syntax)
 >    - [Dockerfile Demo](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#dockerfile-demo)
 >    - [Caching and Layers](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#caching-and-layers)
 >    - [Using Alpine](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#alpine)
+> - [Docker Compose]()
 > - [Version Control](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#version-control)
 >    - [Implementing in Dockerfile](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#implementing-in-dockerfile)
 > - [Docker Registries](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-registries)
@@ -28,7 +30,6 @@ This is my own personal documentation of the common Docker commands. <br>As most
 >    - [Docker Inspect](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-inspect)
 >    - [Docker Logs](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-logs)
 >    - [Docker Exec](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-exec)
-> - [Docker Compose]()
 
 </br>
 
@@ -228,6 +229,12 @@ docker run --name website-copy --volumes-from website -d -p 8081:80 nginx
 
 </br>
 
+## Docker Network
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
+
+</br>
+
 ## Build Images Using Dockerfile
 Dockerfile allows use to build our own images. By running the Dockerfile, we can create our own custom images and custom containers.
 
@@ -291,6 +298,12 @@ When building an image, Docker is able to utilize caching to check for differenc
 ### Using Alpine
 We can utilize the alpine version of an image to make it even more lightweight and this would build images quicker as well. We can find the alpine version in the relevant official Docker Hub images. This is important when using Dockerfile to build your images.
 > Comparing nginx:latest and nginx:alpine images, the difference in the image size is almost 105MB!
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
+
+</br>
+
+## Docker Compose
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
 
@@ -373,7 +386,3 @@ docker exec -it <container-id/container-name> /bin/bash
 > If an error occurs, we can use docker inspect and under cmd, we can see the shell type
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
-
-</br>
-
-## Docker Compose (WIP)
