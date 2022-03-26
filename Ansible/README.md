@@ -12,6 +12,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 > - [Ansible Inventory](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#ansible-inventory)
 >   - [Inventory Group](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#inventory-groups)
 >   - [Inventory Variables](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#inventory-variables)
+>   - [Inventory Types](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#inventory-types)
 > - [Ansible Module/Task/Play/Playbook](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#ansible-moduletaskplayplaybook)
 >   - [Modules](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#modules)
 >   - [Tasks](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#tasks)
