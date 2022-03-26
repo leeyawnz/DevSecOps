@@ -9,7 +9,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 > - [Accessing a Remote Server with a Controller Server](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#accessing-a-remote-server-with-a-controller-server)
 >   - [Using SSH-Copy-ID](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#using-ssh-copy-id)
 >   - [Manually](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#manually)
-> - [Ansible Inventory]()
+> - [Ansible Inventory](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#ansible-inventory)
 
 </br>
 
