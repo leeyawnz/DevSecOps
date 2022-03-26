@@ -170,3 +170,37 @@ ntp_server=ntp.atlanta.example.com
 proxy=proxy.atlanta.example.com
 ```
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
+
+</br>
+
+## Ansible Module/Task/Play
+### Modules
+A module is a specifc action that you want to execute. Basic modules are:
+- ping
+- apt
+- service
+
+### Tasks
+A task consists of all the parameters including the module that you want to run that does one thing.
+
+Below is an example of a task:
+```
+- name: Download Apache2
+  apt:
+    name: apache2
+    state: present
+```
+> We can give a task a name 'Download Apache2' as well to identify what each individual task does.
+
+### Play
+A play consists of a set of tasks that will be run together.
+
+Below is an example of a play with 2 tasks:
+```
+- name: Checking Connection
+  ping: ~
+- name: Download Apache2
+  apt:
+    name: apache2
+    state: present
+```
