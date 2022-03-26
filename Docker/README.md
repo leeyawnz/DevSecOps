@@ -20,7 +20,7 @@ This is my own personal documentation of the common Docker commands. <br>As most
 >    - [Dockerfile Syntax](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#dockerfile-syntax)
 >    - [Dockerfile Demo](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#dockerfile-demo)
 >    - [Caching and Layers](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#caching-and-layers)
->    - [Using Alpine](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#alpine)
+>    - [Using Alpine](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#using-alpine)
 > - [Docker Compose]()
 > - [Version Control](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#version-control)
 >    - [Implementing in Dockerfile](https://github.com/leeyawnz/DevSecOps/tree/main/Docker#implementing-in-dockerfile)
