@@ -185,6 +185,7 @@ A module is a specifc action that you want to execute. Basic modules are:
 - ping
 - apt
 - service
+> A module will be injected into our remote servers and it will execute all the necessary tasks. After execution, this module will be deleted.
 
 ### Tasks
 A task consists of all the parameters, including the module that you want to run that does one thing.
