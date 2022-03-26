@@ -238,7 +238,7 @@ Using docker network, we can control how containers are linked together. Contain
 > - None
 > - Overlay
 > - Macvlan
-> \
+> 
 > By default, all containers will be attached to the default bridge network
 ```
 docker network ls
