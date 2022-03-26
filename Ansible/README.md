@@ -31,7 +31,7 @@ sudo apt install ansible
 </br>
 
 ## Accessing a Remote Server with a Controller Server
-Taking advantage of SSH, we can access different servers remotely to configure them from a controller server. This is done manually or by using ssh-copy-id to make sure that all servers have the public key that was given by the controller server.
+Taking advantage of SSH, we can access different servers remotely from a controller server. This is done manually or by using ssh-copy-id to make sure that all servers have the public key that was given by the controller server. This is key for Ansible as we can now configure remote servers using a single controller server.
 
 </br>
 
@@ -104,3 +104,24 @@ ssh username@ip-address
 > ```
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
+
+</br>
+
+## Ansible Terminologies
+### Inventory
+In Ansible, there is a file called inventory. Inside the inventory file, we can add all the remote servers (including localhost) so that we can target them when we perform Ansible configuration management tasks.
+
+We can create an inventory file easily.
+```
+vi inventory
+```
+Inside this inventory file, we can group servers together.
+> ```
+> ipaddress1
+> \
+> [web]
+> webserver1
+> webserver2
+> \
+> [db]
+> dbserver1
