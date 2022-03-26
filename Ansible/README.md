@@ -87,4 +87,9 @@ We can now double check our access to server1 using the controller instance
 ```
 ssh username@ip-address
 ```
-> Do note that if the authorized_keys file belongs to another user, you can only access the remote server through that user. Generally, we will want to link root to root so that we can do configurations in the remote server.
+> Do note that if the authorized_keys file belongs to another user, you can only access the remote server through that user. Generally, we will want to link root to root so that we can do configurations in the remote server. \
+> \
+> We can escape access from the remote server by exiting it
+> ```
+> exit
+> ```
