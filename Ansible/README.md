@@ -26,6 +26,7 @@ sudo add-apt-repository --yes --update ppa:ansible/ansible
 ```
 sudo apt install ansible
 ```
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
 </br>
 
@@ -36,6 +37,8 @@ Taking advantage of SSH, we can access different servers remotely to configure t
 
 ### Using SSH-Copy-ID
 Need to find out on how to do this
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
 </br>
 
@@ -99,3 +102,5 @@ ssh username@ip-address
 > ```
 > exit
 > ```
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
