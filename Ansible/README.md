@@ -118,10 +118,10 @@ vi inventory
 Inside this inventory file, we can group servers together.
 > ```
 > ipaddress1
-> \
+> 
 > [web]
 > webserver1
 > webserver2
-> \
+> 
 > [db]
 > dbserver1
