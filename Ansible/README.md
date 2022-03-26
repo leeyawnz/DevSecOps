@@ -189,6 +189,7 @@ proxy=proxy.atlanta.example.com
 Static inventory file contains ip addresses of hosts which are not changing. The addresses are explicitly written in this file.
 
 #### 2. Dynamic
+Dynamic inventory is the opposite of static, where the hosts addresses may change. For example, in AWS, whenever we restart an instance, the ip address changes.
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
