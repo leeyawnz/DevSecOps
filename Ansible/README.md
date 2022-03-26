@@ -9,6 +9,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 > - [Accessing a Remote Server with a Controller Server](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#accessing-a-remote-server-with-a-controller-server)
 >   - [Using SSH-Copy-ID](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#using-ssh-copy-id)
 >   - [Manually](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#manually)
+> - [Ansible Inventory]()
 
 </br>
 
@@ -107,8 +108,7 @@ ssh username@ip-address
 
 </br>
 
-## Ansible Terminologies
-### Inventory
+## Ansible Inventory
 In Ansible, there is a file called inventory. Inside the inventory file, we can add all the remote servers (including localhost) so that we can target them when we perform Ansible configuration management tasks.
 
 We can create an inventory file easily.
