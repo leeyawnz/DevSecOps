@@ -33,6 +33,8 @@ Taking advantage of SSH, we can access different servers remotely to configure t
 ### Using SSH-Copy-ID
 Need to find out on how to do this
 
+</br>
+
 ### Manually
 #### 1. Setting up our instances
 First create 2 instances in AWS. After creating the 2 instances,run all 2 instances on 2 separate terminals.
