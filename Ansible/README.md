@@ -134,17 +134,18 @@ We can also have nested groups.
 > [atlanta]
 > host1
 > host2
-> \
+> 
 > [raleigh]
 > host2
 > host3
-> \
+> 
 > [southeast:children]
 > atlanta
 > raleigh
-> \
+> 
 > [usa:children]
 > southeast
 > northeast
 > southwest
 > northwest
+> ```
