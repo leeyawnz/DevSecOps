@@ -67,4 +67,4 @@ Now, check if the id_rsa and id_rsa.pub files have been created
 ls .ssh/
 ```
 > Output: \
-> authorized_keys\tid_rsa\tid_rsa.pub
+> authorized_keys id_rsa id_rsa.pub
