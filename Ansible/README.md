@@ -185,8 +185,6 @@ A module is a specifc action that you want to execute. Basic modules are:
 - apt
 - service
 
-</br>
-
 ### Tasks
 A task consists of all the parameters including the module that you want to run that does one thing.
 
@@ -198,8 +196,6 @@ Below is an example of a task:
     state: present
 ```
 > We can give a task a name 'Download Apache2' as well to identify what each individual task does.
-
-</br>
 
 ### Play
 A play consists of a set of tasks that will be run together.
@@ -214,8 +210,27 @@ Below is an example of a play with 2 tasks:
     state: present
 ```
 
-</br>
-
 ### Playbook
-hello world
+A playbook contains several plays. This playbook is a YAML file.
+
+Below is an example of a playbook:
+```
+- hosts: all
+  tasks:
+    - name: Checking Connection
+      ping: ~
+    - name: Installing Apache2
+      apt:
+        name: apache2
+        state: present
+
+- hosts: all
+  tasks:
+    - name: Enabling Apache2
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+```
+> We can see this as Playbook > Plays > Tasks > Modules, where '>' means consists of.
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
