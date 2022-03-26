@@ -10,6 +10,8 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 >   - [Using SSH-Copy-ID](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#using-ssh-copy-id)
 >   - [Manually](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#manually)
 > - [Ansible Inventory](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#ansible-inventory)
+>   - [Inventory Group](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#inventory-groups)
+>   - [Inventory Variables](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#inventory-variables)
 
 </br>
 
