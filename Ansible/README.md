@@ -269,4 +269,13 @@ handlers:
 ```
 > So as we can see, Playbook > Plays > Tasks > Modules, where '>' means consists of.
 
+To run a playbook, we just need to use the command
+```
+ansible-playbook playbook.yml
+```
+> As mentioned before, Ansible uses the default /etc/ansible/hosts file as inventory. We can specify the specific inventory file with a '-i' parameter
+> ```
+> ansible-playbook -i inventory playbook.yml
+> ```
+
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
