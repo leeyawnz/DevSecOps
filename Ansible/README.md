@@ -117,35 +117,53 @@ vi inventory
 ```
 ### Inventory Groups
 Inside this inventory file, we can group servers together.
-> ```
-> ipaddress1
-> 
-> [web]
-> webserver1
-> webserver2
-> 
-> [db]
-> dbserver1
-> ```
+```
+ipaddress1
+ 
+[web]
+webserver1
+webserver2
+
+[db]
+dbserver1
+```
 > From here, we can see that we have 3 server groups.
 
 We can also have nested groups using ":childen" in the [ ].
-> ```
-> [atlanta]
-> host1
-> host2
-> 
-> [raleigh]
-> host2
-> host3
-> 
-> [southeast:children]
-> atlanta
-> raleigh
-> 
-> [usa:children]
-> southeast
-> northeast
-> southwest
-> northwest
-> ```
+```
+[atlanta]
+host1
+host2
+
+[raleigh]
+host2
+host3
+
+[southeast:children]
+atlanta
+raleigh
+
+[usa:children]
+southeast
+northeast
+southwest
+northwest
+```
+
+### Inventory Variables
+We can assign variables to a server as well.
+```
+[atlanta]
+host1 http_port=80 maxRequestsPerChild=808
+host2 http_port=303 maxRequestsPerChild=909
+```
+If a group shares the same variables, we can group the variable together and attach them to the server group.
+```
+[atlanta]
+host1
+host2
+
+[atlanta:vars]
+ntp_server=ntp.atlanta.example.com
+proxy=proxy.atlanta.example.com
+```
