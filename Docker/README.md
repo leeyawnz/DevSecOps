@@ -231,6 +231,15 @@ docker run --name website-copy --volumes-from website -d -p 8081:80 nginx
 
 ## Docker Network
 Using docker network, we can control how containers are linked together. Containers in the same network can communicate with each other with just container names.
+
+### Types of Networks
+> - Bridge
+> - Host
+> - None
+> - Overlay
+> - Macvlan
+> \
+> By default, all containers will be attached to the default bridge network
 ```
 docker network ls
 ```
@@ -238,7 +247,7 @@ docker network ls
 ```
 docker network create <network-name>
 ```
-> We can create a new network using this command.
+> We can create a new bridge network using this command.
 ```
 docker run --net <network-name> <image-id/image-name>
 ```
@@ -262,6 +271,7 @@ vi Dockerfile
 > RUN - command triggers while building the Docker image \
 > CMD - command triggers after the image has been built and launched, can be overwritten \
 > ENTRYPOINT - default command that will run regardless, cannot be overwritten \
+> EXpose - exposing a container port
 > \
 > ENTRYPOINT vs CMD \
 > e.g \
