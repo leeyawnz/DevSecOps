@@ -129,7 +129,7 @@ webserver2
 [db]
 dbserver1
 ```
-> From here, we can see that we have 3 server groups.
+> From here, we can see that we have 3 server groups. By default, every group belong to the 'all' group
 
 We can also have nested groups using ":childen" in the [ ].
 ```
