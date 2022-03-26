@@ -29,7 +29,7 @@ sudo apt install ansible
 Taking advantage of SSH, we can access different servers remotely to configure them.
 
 ### ssh Demo
-#### Setting up our instances
+#### 1. Setting up our instances
 To see this in action, we can first create 3 instances in AWS. After creating the 3 instances,run all 3 instances on 3 separate terminals.
 
 Inside the first instance, rename it to controller
@@ -44,7 +44,7 @@ Inside the third instance, rename it to server2
 ```
 sudo hostnamectl set-hostname server2
 ```
-#### Generating an ssh key
+#### 2. Generating an ssh key
 Inside our controller instance, check if an ssh key is present already.
 ```
 ls .ssh/
