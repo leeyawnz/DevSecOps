@@ -187,7 +187,7 @@ A module is a specifc action that you want to execute. Basic modules are:
 - service
 
 ### Tasks
-A task consists of all the parameters including the module that you want to run that does one thing.
+A task consists of all the parameters, including the module that you want to run that does one thing.
 
 Below is an example of a task:
 ```
