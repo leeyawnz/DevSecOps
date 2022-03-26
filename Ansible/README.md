@@ -127,3 +127,23 @@ Inside this inventory file, we can group servers together.
 > dbserver1
 > ```
 > From here, we can see that we have 3 server groups.
+
+We can also have nested groups.
+> ```
+> [atlanta]
+> host1
+> host2
+> \
+> [raleigh]
+> host2
+> host3
+> \
+> [southeast:children]
+> atlanta
+> raleigh
+> \
+> [usa:children]
+> southeast
+> northeast
+> southwest
+> northwest
