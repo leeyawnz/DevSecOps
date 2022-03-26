@@ -35,6 +35,13 @@ sudo add-apt-repository --yes --update ppa:ansible/ansible
 ```
 sudo apt install ansible
 ```
+Checking if Ansible has been installed
+```
+python
+```
+```
+ansible --version
+```
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
 </br>
