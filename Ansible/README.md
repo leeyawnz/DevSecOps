@@ -115,6 +115,7 @@ We can create an inventory file easily.
 ```
 vi inventory
 ```
+### Inventory Groups
 Inside this inventory file, we can group servers together.
 > ```
 > ipaddress1
