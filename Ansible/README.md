@@ -180,6 +180,8 @@ A module is a specifc action that you want to execute. Basic modules are:
 - apt
 - service
 
+</br>
+
 ### Tasks
 A task consists of all the parameters including the module that you want to run that does one thing.
 
@@ -191,6 +193,8 @@ Below is an example of a task:
     state: present
 ```
 > We can give a task a name 'Download Apache2' as well to identify what each individual task does.
+
+</br>
 
 ### Play
 A play consists of a set of tasks that will be run together.
@@ -204,3 +208,4 @@ Below is an example of a play with 2 tasks:
     name: apache2
     state: present
 ```
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
