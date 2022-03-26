@@ -30,6 +30,8 @@ sudo apt install ansible
 ## Accessing a Remote Server with a Controller Server
 Taking advantage of SSH, we can access different servers remotely to configure them from a controller server. This is done manually or by using ssh-copy-id to make sure that all servers have the public key that was given by the controller server.
 
+</br>
+
 ### Using SSH-Copy-ID
 Need to find out on how to do this
 
