@@ -4,7 +4,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 
 ## Table of Contents:
 > - [Setting Up Ansible]()
-> - [ssh-keygen]()
+> - [Introduction to SSH-Keygen]()
 >   - [ssh Demo]()
 
 </br>
@@ -26,8 +26,8 @@ sudo apt install ansible
 
 </br>
 
-## ssh-keygen
-Taking advantage of SSH, we can access different servers remotely to configure them from a controller server.
+## Introduction to SSH-Keygen
+Taking advantage of SSH, we can access different servers remotely to configure them from a controller server. This is done by making sure that all servers have the public key that was given by the controller server. 
 
 ### Accessing a Remote Server with a Controller Server
 #### Using ssh-copy-id
