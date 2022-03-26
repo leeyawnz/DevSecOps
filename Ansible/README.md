@@ -186,6 +186,8 @@ proxy=proxy.atlanta.example.com
 
 ### Inventory Types
 #### 1. Static
+Static inventory file contains ip addresses of hosts which are not changing. The addresses are explicitly written in this file.
+
 #### 2. Dynamic
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
