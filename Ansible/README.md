@@ -29,7 +29,11 @@ sudo apt install ansible
 ## ssh-keygen
 Taking advantage of SSH, we can access different servers remotely to configure them from a controller server.
 
-### ssh Demo
+### Accessing a Remote Server with a Controller Server
+#### Using ssh-copy-id
+Need to find out on how to do this
+
+#### Manually
 #### 1. Setting up our instances
 To see this in action, we can first create 3 instances in AWS. After creating the 3 instances,run all 3 instances on 3 separate terminals.
 
@@ -69,3 +73,6 @@ ls .ssh/
 ```
 > Output: \
 > authorized_keys id_rsa id_rsa.pub
+
+4. Copying ssh Public Key into server1 and server2
+From the controller instance, copy the ssh key from the 
