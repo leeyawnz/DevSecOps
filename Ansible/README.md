@@ -14,9 +14,10 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 >   - [Inventory Variables](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#inventory-variables)
 > - [Ansible Module/Task/Play/Playbook](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#ansible-moduletaskplayplaybook)
 >   - [Modules](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#modules)
->   - [Task](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#tasks)
->   - [Play](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#play)
->   - [Playbook](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#playbook)
+>   - [Tasks](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#tasks)
+>   - [Handlers](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#handlers)
+>   - [Plays](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#plays)
+>   - [Playbooks](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#playbooks)
 
 </br>
 
@@ -190,27 +191,48 @@ A task consists of all the parameters including the module that you want to run 
 
 Below is an example of a task:
 ```
-- name: Download Apache2
+- name: Installing Apache2
   apt:
     name: apache2
     state: present
 ```
 > We can give a task a name 'Download Apache2' as well to identify what each individual task does.
 
-### Play
+### Handlers
+A handler is a special set of tasks where it will be called if a task successfully caused a change in the system.
+
+Below is an example of a handler:
+```
+- name: Installing Apache2
+  apt:
+    name: apache2
+    state: present
+  notify:
+    - Start and Enable Apache2
+
+handlers:
+- name: Start and Enable Apache2
+  service:
+    name: apache2
+    state: started
+    enabled: yes
+```
+> When successfully caused a change, using notify, the handler task will be invoked.
+
+### Plays
 A play consists of a set of tasks that will be run together.
 
 Below is an example of a play with 2 tasks:
 ```
 - name: Checking Connection
   ping: ~
-- name: Download Apache2
+- name: Installing Apache2
   apt:
     name: apache2
     state: present
 ```
 
-### Playbook
+### Playbooks
 A playbook contains several plays. This playbook is a YAML file.
 
 Below is an example of a playbook:
@@ -219,19 +241,23 @@ Below is an example of a playbook:
   tasks:
     - name: Checking Connection
       ping: ~
+
+- hosts: all
+  tasks:
     - name: Installing Apache2
       apt:
         name: apache2
         state: present
-
-- hosts: all
-  tasks:
-    - name: Enabling Apache2
-      service:
-        name: apache2
-        state: started
-        enabled: yes
+      notify:
+        - Start and Enable Apache2
+        
+handlers:
+- name: Start and Enable Apache2
+  service:
+    name: apache2
+    state: started
+    enabled: yes
 ```
-> We can see this as Playbook > Plays > Tasks > Modules, where '>' means consists of.
+> So as we can see, Playbook > Plays > Tasks > Modules, where '>' means consists of.
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
