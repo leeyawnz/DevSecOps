@@ -230,6 +230,19 @@ docker run --name website-copy --volumes-from website -d -p 8081:80 nginx
 </br>
 
 ## Docker Network
+Using docker network, we can control how containers are linked together. Containers in the same network can communicate with each other with just container names.
+```
+docker network ls
+```
+> We can check all existing and newly created networks with this command.
+```
+docker network create <network-name>
+```
+> We can create a new network using this command.
+```
+docker run --net <network-name> <image-id/image-name>
+```
+> Using this command, we can link the container to the specific network
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
 
