@@ -183,6 +183,11 @@ host2
 ntp_server=ntp.atlanta.example.com
 proxy=proxy.atlanta.example.com
 ```
+
+### Inventory Types
+#### 1. Static
+#### 2. Dynamic
+
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
 </br>
