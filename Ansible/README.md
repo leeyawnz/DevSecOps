@@ -26,10 +26,9 @@ sudo apt install ansible
 
 </br>
 
-## Introduction to SSH-Keygen
+## Accessing a Remote Server with a Controller Server
 Taking advantage of SSH, we can access different servers remotely to configure them from a controller server. This is done by making sure that all servers have the public key that was given by the controller server. 
 
-### Accessing a Remote Server with a Controller Server
 ### 1. Using SSH-Copy-ID
 Need to find out on how to do this
 
