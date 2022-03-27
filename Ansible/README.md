@@ -13,6 +13,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 >   - [Inventory Group](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#inventory-groups)
 >   - [Inventory Variables](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#inventory-variables)
 >   - [Inventory Types](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#inventory-types)
+>   - [Additional Inventory-related Commands]()
 > - [Ansible Module/Task/Play/Playbook](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#ansible-moduletaskplayplaybook)
 >   - [Modules](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#modules)
 >   - [Tasks](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#tasks)
@@ -191,6 +192,35 @@ Static inventory file contains ip addresses of hosts which are not changing. The
 
 #### 2. Dynamic
 Dynamic inventory is the opposite of static, where the hosts addresses may change. For example, in AWS, whenever we restart an instance, the ip address changes.
+
+### Additional Inventory-related Commands
+Display all inventory details
+```
+ansible-inventory -i inventory --list
+```
+> Display specific group inventory 
+> ```
+> ansible-inventory -i inventory group --list
+> ```
+
+
+Display inventory hierarchy
+```
+ansible-inventory -i inventory --graph
+```
+> Display group hierarchy
+> ```
+> ansible-inventory -i inventory group --graph
+> ```
+
+Display inventory variables
+```
+ansible-inventory -i inventory --vars
+```
+> Display group variables
+> ```
+> ansible-inventory -i inventory group --vars
+> ```
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
