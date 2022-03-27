@@ -195,6 +195,8 @@ Dynamic inventory is the opposite of static, where the hosts addresses may chang
 
 Have yet to try, can refer to this article [here](https://devopscube.com/setup-ansible-aws-dynamic-inventory/).
 
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
+
 ### Additional Inventory-related Commands
 Display all inventory details
 ```
