@@ -347,4 +347,11 @@ Configuration file precedence (first to last):
 </br>
 
 ## Ad-hoc Commands
+Ad-hoc commands are useful when it comes to performing one-off tasks that makes small changes to configurations. If big configurations are required, we can always use playbooks or roles.
+
+Example of an ad-hoc command:
+```
+ansible -i inventory all -m ping
+```
+
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
