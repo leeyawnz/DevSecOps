@@ -193,6 +193,8 @@ Static inventory file contains ip addresses of hosts which are not changing. The
 #### 2. Dynamic
 Dynamic inventory is the opposite of static, where the hosts addresses may change. For example, in AWS, whenever we restart an instance, the ip address changes.
 
+Have yet to try, can refer to this article [here](https://devopscube.com/setup-ansible-aws-dynamic-inventory/).
+
 ### Additional Inventory-related Commands
 Display all inventory details
 ```
