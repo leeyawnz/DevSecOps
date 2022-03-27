@@ -328,8 +328,14 @@ ansible-playbook playbook.yml
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
 ## Ansible Configuration
+
+### Ansible.cfg File
 Ansible searches for the first ansible.cfg file it can find and uses that configuration file.
 
-ANSIBLE_CONFIG (environment variable if set) > ansible.cfg (in current directory) > ../ansible.cfg (in home directory) > /etc/ansible/ansible.cfg
+Configuration file precedence (first to last):
+- ANSIBLE_CONFIG (environment variable if set) 
+- ansible.cfg (in current directory) 
+- ../ansible.cfg (in home directory) 
+- /etc/ansible/ansible.cfg
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
