@@ -328,6 +328,8 @@ ansible-playbook playbook.yml
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
+</br>
+
 ## Ansible Configuration
 Ansible searches for the first ansible.cfg file it can find and uses that configuration file. We can find more details in the ansible.cfg file.
 ```
