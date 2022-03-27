@@ -20,6 +20,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 >   - [Handlers](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#handlers)
 >   - [Plays](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#plays)
 >   - [Playbooks](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#playbooks)
+> - [Ansible Configuration](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#ansible-configuration)
 
 </br>
 
@@ -328,8 +329,6 @@ ansible-playbook playbook.yml
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
 ## Ansible Configuration
-
-### Ansible.cfg File
 Ansible searches for the first ansible.cfg file it can find and uses that configuration file. We can find more details in the ansible.cfg file.
 ```
 vi /etc/ansible/ansible.cfg
@@ -341,4 +340,9 @@ Configuration file precedence (first to last):
 - ../ansible.cfg (in home directory) 
 - /etc/ansible/ansible.cfg
 
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
+
+</br>
+
+## Ad-hoc Commands
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
