@@ -286,5 +286,9 @@ ansible-playbook playbook.yml
 > ```
 > ansible-playbook -i inventory playbook.yml
 > ```
+> Or we can specify the specific group as well
+> ```
+> ansible-playbook -i inventory web playbook.yml
+> ```
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
