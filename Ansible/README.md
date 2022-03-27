@@ -330,7 +330,10 @@ ansible-playbook playbook.yml
 ## Ansible Configuration
 
 ### Ansible.cfg File
-Ansible searches for the first ansible.cfg file it can find and uses that configuration file.
+Ansible searches for the first ansible.cfg file it can find and uses that configuration file. We can find more details in the ansible.cfg file.
+```
+vi /etc/ansible/ansible.cfg
+```
 
 Configuration file precedence (first to last):
 - ANSIBLE_CONFIG (environment variable if set) 
