@@ -414,6 +414,18 @@ Examples of valid variable names:
 </br>
 
 ### Using Variables
+We can manipulate variable output in two ways:
+- {{ ansible_facts["eth0"]["ipv4"]["address"] }}
+- {{ ansible_facts.eth0.ipv4.address }}
+> Both methods will give the same output: \
+> ansible_facts { \
+>  eth0: { \
+>   ipv4: { \
+>    address: value \
+>   } \
+>  } \
+> } \
+
 ### 1. Specifying Inside Playbook
 We can specify variables and use them inside of our playbooks in this manner:
 ```
