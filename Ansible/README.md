@@ -386,3 +386,11 @@ ansible -i inventory all -m apt -a "name:httpd state:present"
 > Search for the specific module documentation as required. May require to become root with the "-b" argument.
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
+
+</br>
+
+## Gathering Facts
+This specific module is used to gather information about the inventory. We can use this information later to see which variable can be used for applying conditionals in our playbook file.
+```
+ansible -i inventory -m gather_facts --tree /tmp/facts
+```
