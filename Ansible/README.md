@@ -370,7 +370,6 @@ ansible -i inventory all -m apt -a "name:httpd state:present"
 > ```
 > ansible -i <inventory> <inventory-group> -m <module> -a "<arguments>"
 > ```
-> Search for the specific module documentation as required. \
-> May require to become root with the "-b" argument.
+> Search for the specific module documentation as required. May require to become root with the "-b" argument.
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
