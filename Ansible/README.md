@@ -7,7 +7,8 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 ## Table of Contents:
 > - [Setting Up Ansible](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#setting-up-ansible)
 > - [Accessing a Remote Server with a Controller Server](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#accessing-a-remote-server-with-a-controller-server)
->   - [Using SSH-Copy-ID](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#using-ssh-copy-id)
+>   - [AWS Instance Creation](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#aws-instance-creation)
+>   - [AWS Instance Creation from an AWS Instance Snapshot](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#aws-instance-creation-from-an-aws-instance-snapshot)
 >   - [Manually](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#manually)
 > - [Ansible Inventory](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#ansible-inventory)
 >   - [Inventory Group](https://github.com/leeyawnz/DevSecOps/tree/main/Ansible#inventory-groups)
@@ -58,13 +59,15 @@ Taking advantage of SSH, we can access different servers remotely from a control
 ### AWS Instance Creation
 When creating an instance, we can go to Configure Instance Details (Step 3) and under the user data we can copy the id_rsa.pub key and paste it here in this section.
 ```
-echo "<id_rsa.pub ssh key>" >> root/.ssh/authorized_keys
+echo "<id_rsa.pub ssh key>" >> <specific path>/.ssh/authorized_keys
 ```
-> Need to test this out.
+> Need to test this out as there seems to be some error. The authorized_keys file is created after the instance is created and therefore, we are unable to push this ssh-key into the file. Would need to double-check this again.
 Once we launch the instances, we will have password-less access for those instances.
 
-### Instance Creation from an Instance Snapshot
-We can get a 
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
+
+### AWS Instance Creation from an AWS Instance Snapshot
+We can take a snapshot, from AWS Snapshot tab, of an instance that has password-less ssh authentication in AWS and we can create multiple instances from the snapshot from that particular instance.
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
