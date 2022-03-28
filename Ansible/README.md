@@ -419,12 +419,12 @@ We can manipulate variable output in two ways:
 - {{ ansible_facts.eth0.ipv4.address }}
 > Both methods will give the same output: \
 > ansible_facts { \
->  eth0: { \
->   ipv4: { \
->    address: value \
->   } \
->  } \
-> } \
+> &nbsp;eth0: { \
+> &nbsp;&nbsp;ipv4: { \
+> &nbsp;&nbsp;&nbsp;address: value \
+> &nbsp;&nbsp;} \
+> &nbsp;} \
+> }
 
 ### 1. Specifying Inside Playbook
 We can specify variables and use them inside of our playbooks in this manner:
