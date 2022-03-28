@@ -397,3 +397,4 @@ The command below displays facts from all hosts and stores them indexed by hostn
 ```
 ansible -i inventory -m gather_facts --tree /tmp/facts
 ```
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
