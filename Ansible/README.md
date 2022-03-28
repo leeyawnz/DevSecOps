@@ -25,7 +25,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 > - [Ad-hoc Commands](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#ad-hoc-commands)
 > - [Managing Variables](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#managing-variables)
 >   - [Creating Variables](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#creating-variables)
->   - [Using Variables](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#using-variables)
+>   - [Using Variables](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#using-variables) \
 >     [1. Specifying on Command Line](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#1-specifying-on-command-line) \
 >     2. [Specifying Inside Playbook](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#2-specifying-inside-playbook) \
 >     3. [Creating a Variable File](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#3-creating-a-variable-file) \
