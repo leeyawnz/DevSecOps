@@ -31,6 +31,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 >     [3. Creating a Variable File](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#3-creating-a-variable-file) \
 >     [4. From a Registered Variable](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#4-from-a-registered-variable) \
 >     [5. Gathering Facts](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#5-gathering-facts)
+>   - [Variable Precedence](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#variable-precedence)
 
 </br>
 
@@ -516,3 +517,6 @@ ansible -i inventory -m gather_facts --tree /tmp/facts
 The metadata output from gathering facts can be used as a variable in a similar fashion like a registered variable.
  
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
+
+### Variable Precedence
+We can check variable precedence in the Ansible documentation [here](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable).
