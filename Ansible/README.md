@@ -252,6 +252,7 @@ A module is a specifc action that you want to execute. Basic modules are:
 - ping
 - apt
 - service
+- command
 > A module will be injected into our remote servers and it will execute all the necessary tasks. After execution, this module will be deleted.
 
 ### Tasks
@@ -380,7 +381,7 @@ Example of an ad-hoc command:
 ansible -i inventory all -m apt -a "name:httpd state:present"
 ```
 > ```
-> ansible -i <inventory> <inventory-group> -m <module> -a "<arguments>"
+> ansible -i <inventory> <inventory-group> -m <module> -a "<attributes>"
 > ```
 > Search for the specific module documentation as required. May require to become root with the "-b" argument.
 
