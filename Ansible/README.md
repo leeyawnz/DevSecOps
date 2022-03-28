@@ -256,6 +256,7 @@ A task consists of all the parameters, including the module that you want to run
 
 Below is an example of a task:
 ```
+---
 - name: Installing Apache2
   apt:
     name: apache2
@@ -268,6 +269,7 @@ A handler is a special set of tasks where it will be called if a task successful
 
 Below is an example of a handler:
 ```
+---
 - name: Installing Apache2
   apt:
     name: apache2
@@ -289,6 +291,7 @@ A play consists of a set of tasks that will be run together.
 
 Below is an example of a play with 2 tasks:
 ```
+---
 - name: Checking Connection
   ping: ~
 - name: Installing Apache2
@@ -302,6 +305,7 @@ A playbook contains several plays. This playbook is a YAML file.
 
 Below is an example of a playbook:
 ```
+---
 - hosts: all
   become: yes
   tasks:
