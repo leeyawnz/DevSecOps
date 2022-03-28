@@ -391,6 +391,8 @@ ansible -i inventory all -m apt -a "name:httpd state:present"
 
 ## Gathering Facts
 This specific module is used to gather information about the inventory. We can use this information later to see which variable can be used for applying conditionals in our playbook file.
+ 
+The command below displays facts from all hosts and stores them indexed by hostname at /tmp/facts.
 ```
 ansible -i inventory -m gather_facts --tree /tmp/facts
 ```
