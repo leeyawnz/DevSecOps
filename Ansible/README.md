@@ -453,7 +453,7 @@ To use it in our playbooks, we have to add this file in the playbook in this man
 ```
 
 ### 3. From a Registered Variable
-After running a task, that task will output some metadata. We can save that metadata in a variable and call that specific metadata.
+After running a task, that task will output some metadata. We can save that metadata in a variable and call a specific metadata.
 ```
 - name: Replace index.html
   copy:
@@ -464,9 +464,8 @@ After running a task, that task will output some metadata. We can save that meta
   debug:
     msg: "{{ index_file }}"
 ```
-Using the debug module, we can print out all the metadata that the task will output and use it as a reference to use as variables.
- 
-In this case, the debug module will only print out the checksum variable output:
+Using the debug module, we can print out all the metadata that the task will output and use it as a reference to use as variables. \
+In this case, the debug module will only print out the specific checksum variable output:
 ```
 [...]
 - name: Output index_file Variable Contents
