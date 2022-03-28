@@ -365,5 +365,9 @@ Example of an ad-hoc command:
 ```
 ansible -i inventory all -m ping
 ```
+> ```
+> ansible -i <inventory> <inventory-group> -m <module> <parameters>
+> ```
+> Search for the specific module documentation as required
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
