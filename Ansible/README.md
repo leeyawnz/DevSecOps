@@ -29,7 +29,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 >     - [1. Specifying Inside Playbook](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#1-specifying-inside-playbook)
 >     - [2. Creating a Variable File](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#2-creating-a-variable-file)
 >     - [3. From a Registered Variable](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#3-from-a-registered-variable)
->     - [4. Gathering Facts](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#gathering-facts)
+>     - [4. Gathering Facts](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#4-gathering-facts)
 
 </br>
 
