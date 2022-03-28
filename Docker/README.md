@@ -30,6 +30,7 @@ This is my own personal documentation of the common Docker commands. <br>As most
 >    - [Docker Inspect](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-inspect)
 >    - [Docker Logs](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-logs)
 >    - [Docker Exec](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-exec)
+>    - [Managing Unused Docker Resources](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#managing-unused-docker-resources)
 
 </br>
 
