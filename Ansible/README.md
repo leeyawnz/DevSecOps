@@ -363,10 +363,10 @@ Ad-hoc commands are useful when it comes to performing one-off tasks that makes 
 
 Example of an ad-hoc command:
 ```
-ansible -i inventory all -m ping
+ansible -i inventory all -m apt -a "name:httpd state:present"
 ```
 > ```
-> ansible -i <inventory> <inventory-group> -m <module> <parameters>
+> ansible -i <inventory> <inventory-group> -m <module> -a "<arguments>"
 > ```
 > Search for the specific module documentation as required
 
