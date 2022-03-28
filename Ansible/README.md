@@ -66,6 +66,8 @@ Once we launch the instances, we will have password-less access for those instan
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
+</br>
+
 ### AWS Instance Creation from an AWS Instance Snapshot
 We can take a snapshot, from AWS Snapshot tab, of an instance that has password-less ssh authentication in AWS and we can create multiple instances from the snapshot from that particular instance.
 
