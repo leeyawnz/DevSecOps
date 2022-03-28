@@ -23,7 +23,8 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 >   - [Playbooks](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#playbooks)
 > - [Ansible Configuration](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#ansible-configuration)
 > - [Ad-hoc Commands](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#ad-hoc-commands)
-> - [Gathering Facts](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#gathering-facts)
+> - [Managing Variables](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#managing-variables)
+>   - [Gathering Facts](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#gathering-facts)
 
 </br>
 
@@ -390,7 +391,8 @@ ansible -i inventory all -m apt -a "name:httpd state:present"
 
 </br>
 
-## Gathering Facts
+## Managing Variables
+### Gathering Facts
 This specific module is used to gather information about the inventory. We can use this information later to see which variable can be used for applying conditionals in our playbook file.
  
 The command below displays facts from all hosts and stores them indexed by hostname at /tmp/facts.
