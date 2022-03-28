@@ -251,7 +251,15 @@ docker network create <network-name>
 ```
 docker run --net <network-name> <image-id/image-name>
 ```
-> Using this command, we can link the container to the specific network
+> Using this command, we can link the container to the specific network during the run command.
+```
+docker network connect <network-id> <container-id>
+```
+> This command connects the container to a specific network.
+```
+docker network disconnect <network-id> <container-id>
+```
+> This command disconnects the container from a specific network
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
 
@@ -465,3 +473,26 @@ docker exec -it <container-id/container-name> /bin/bash
 > If an error occurs, we can use docker inspect and under cmd, we can see the shell type
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
+
+## Managing Unused Docker Resources
+As the number of images, containers and networks grow, some of them will no longer be used and we are able to remove them to make space for other resources. We can do this by pruning.
+```
+docker image prune
+```
+> This command removes all images not referenced by any containers.
+```
+docker container prune
+```
+> This command removes all stopped containers.
+```
+docker volume prune
+```
+> This command removes any unused local volumes that are not referenced by any containers.
+```
+docker network prune
+```
+> This command removes any unused networks that are not referenced by any containers.
+```
+docker system prune
+```
+> This command removes any unused resources (images, containers, networks, volumes) that are not referenced by any containers.
