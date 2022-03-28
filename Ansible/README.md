@@ -520,3 +520,5 @@ The metadata output from gathering facts can be used as a variable in a similar 
 
 ### Variable Precedence
 We can check variable precedence in the Ansible documentation [here](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable).
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
