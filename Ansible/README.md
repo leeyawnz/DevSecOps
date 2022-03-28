@@ -26,10 +26,11 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 > - [Managing Variables](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#managing-variables)
 >   - [Creating Variables](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#creating-variables)
 >   - [Using Variables](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#using-variables)
->     - [1. Specifying Inside Playbook](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#1-specifying-inside-playbook)
->     - [2. Creating a Variable File](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#2-creating-a-variable-file)
->     - [3. From a Registered Variable](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#3-from-a-registered-variable)
->     - [4. Gathering Facts](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#4-gathering-facts)
+>     - [1. Specifying on Command Line](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#1-specifying-on-command-line)
+>     - [2. Specifying Inside Playbook](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#2-specifying-on-playbook)
+>     - [3. Creating a Variable File](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#3-creating-a-variable-file)
+>     - [4. From a Registered Variable](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#4-from-a-registered-variable)
+>     - [5. Gathering Facts](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#5-gathering-facts)
 
 </br>
 
@@ -426,7 +427,18 @@ We can manipulate variable output in two ways:
 > &nbsp;&nbsp;&nbsp;&nbsp;} \
 > }
 
-### 1. Specifying Inside Playbook
+### 1. Specifying on Command Line
+Using the '-e' or '--extra-vars' attribute, we can specify variables in the command line:
+```
+ansible-playbook playbook.yml --extra-vars "version=1.23.45 other_variable=foo"
+```
+> Inside the playbook.yml, \
+> src: "{{ version }}"
+> dest: "{{ other_variable }}"
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
+
+### 2. Specifying Inside Playbook
 We can specify variables and use them inside of our playbooks in this manner:
 ```
 ---
@@ -452,10 +464,10 @@ We can specify variables and use them inside of our playbooks in this manner:
  
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
-### 2. Creating a Variable File
+### 3. Creating a Variable File
 We can create a file for our variables as well.
 ```
-vi apache2_vars
+vi apache2_vars.yml
 ```
 Inside the apache2_vars file, we can add the variables:
 ```
@@ -469,12 +481,12 @@ To use it in our playbooks, we have to add this file in the playbook in this man
 - hosts: all
   become: yes
   vars_files:
-    - apache2_vars
+    - apache2_vars.yml
 [...]
 ```
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
-### 3. From a Registered Variable
+### 4. From a Registered Variable
 After running a task, that task will output some metadata. We can save that metadata in a variable and call a specific metadata.
 ```
 - name: Replace index.html
@@ -496,7 +508,7 @@ In this case, the debug module will only print out the specific checksum variabl
 ```
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
-### 4. Gathering Facts
+### 5. Gathering Facts
 This specific module is used to gather information about the inventory. The command below displays facts from all hosts and stores them indexed by hostname at /tmp/facts.
 ```
 ansible -i inventory -m gather_facts --tree /tmp/facts
