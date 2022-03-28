@@ -417,11 +417,11 @@ Examples of valid variable names:
 We can manipulate variable output in two ways:
 - {{ ansible_facts["eth0"]["ipv4"]["address"] }}
 - {{ ansible_facts.eth0.ipv4.address }}
-> Both methods will give the same output: \
+> Both methods will give the same output: "value" \
 > ansible_facts { \
 > &nbsp;&nbsp;&nbsp;&nbsp;eth0: { \
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ipv4: { \
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address: value \
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address: "value" \
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} \
 > &nbsp;&nbsp;&nbsp;&nbsp;} \
 > }
