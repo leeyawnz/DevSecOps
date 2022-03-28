@@ -55,8 +55,16 @@ Taking advantage of SSH, we can access different servers remotely from a control
 
 </br>
 
-### Using SSH-Copy-ID
-Need to find out on how to do this
+### AWS Instance Creation
+When creating an instance, we can go to Configure Instance Details (Step 3) and under the user data we can copy the id_rsa.pub key and paste it here in this section.
+```
+echo "<id_rsa.pub ssh key>" >> root/.ssh/authorized_keys
+```
+> Need to test this out.
+Once we launch the instances, we will have password-less access for those instances.
+
+### Instance Creation from an Instance Snapshot
+We can get a 
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
