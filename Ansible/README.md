@@ -425,6 +425,7 @@ We can specify variables and use them inside of our playbooks in this manner:
       copy:
         src: "{{ apache2_src }}"
         dest: "{{ apache2_dest }}"
+```
 > Depending on where the variable is mentioned, there may or may not be a need to specify it with " ". \
 > \
 > E.g \
