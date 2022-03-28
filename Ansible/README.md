@@ -23,6 +23,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 >   - [Playbooks](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#playbooks)
 > - [Ansible Configuration](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#ansible-configuration)
 > - [Ad-hoc Commands](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#ad-hoc-commands)
+> - [Gathering Facts](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#gathering-facts)
 
 </br>
 
