@@ -392,11 +392,92 @@ ansible -i inventory all -m apt -a "name:httpd state:present"
 </br>
 
 ## Managing Variables
-### Gathering Facts
+In Ansible, we can create or use existing variables to create a more dynamic playbook.
+ 
+### Creating Variables
+We can create variables separating multiple words with an '_'.
+
+Examples of valid variable names:
+> foo \
+> foo_env \
+> foo_port \
+> foo5 \
+> _foo
+ 
+### Using Variables
+### 1. Specifying Inside Playbook
+We can specify variables and use them inside of our playbooks in this manner:
+```
+---
+- hosts: all
+  become: yes
+  vars:
+    - apache2_src: <path>
+    - apache2_dest: <path>
+  tasks:
+    - name: Installing Apache2
+      apt:
+        name: apache2
+        state: present
+    - name: Adding File Apache2 Server
+      copy:
+        src: "{{ apache2_src }}"
+        dest: "{{ apache2_dest }}"
+> Depending on where the variable is mentioned, there may or may not be a need to specify it with " ". \
+> \
+> E.g \
+> url: /usr/share/{{ package_name }}/html
+ 
+### 2. Creating a Variable File
+We can create a file for our variables as well.
+```
+vi apache2_vars
+```
+Inside the apache2_vars file, we can add the variables:
+```
+apache2_src: <path>
+apache2_dest: <path>
+```
+
+To use it in our playbooks, we have to add this file in the playbook in this manner:
+```
+---
+- hosts: all
+  become: yes
+  vars_files:
+    - apache2_vars
+[...]
+```
+
+### 3. From a Registered Variable
+After running a task, that task will output some metadata. We can save that metadata in a variable and call that specific metadata.
+```
+- name: Replace index.html
+  copy:
+    dest: /var/www/html/index.html
+    content: "Hello World"
+  register: index_file
+- name: Output index_file Variable Contents
+  debug:
+    msg: "{{ index_file }}"
+```
+Using the debug module, we can print out all the metadata that the task will output and use it as a reference to use as variables.
+ 
+In this case, the debug module will only print out the checksum variable output:
+```
+[...]
+- name: Output index_file Variable Contents
+  debug:
+    msg: "{{ index_file.checksum }}"
+```
+
+### 4. Gathering Facts
 This specific module is used to gather information about the inventory. We can use this information later to see which variable can be used for applying conditionals in our playbook file.
  
 The command below displays facts from all hosts and stores them indexed by hostname at /tmp/facts.
 ```
 ansible -i inventory -m gather_facts --tree /tmp/facts
 ```
+The metadata output from gathering facts can be used as a variable in a similar fashion like a registered variable.
+ 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
