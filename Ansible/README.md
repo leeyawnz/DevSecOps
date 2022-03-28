@@ -248,6 +248,7 @@ ansible-inventory -i inventory --vars
 ## Ansible Module/Task/Play/Playbook
 ### Modules
 A module is a specifc action that you want to execute. Basic modules are:
+- debug
 - ping
 - apt
 - service
