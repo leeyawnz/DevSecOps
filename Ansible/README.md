@@ -460,7 +460,7 @@ We can specify variables and use them inside of our playbooks in this manner:
 ```
 > Depending on where the variable is mentioned, there may or may not be a need to specify it with " ". \
 > \
-> E.g \
+> e.g: \
 > url: /usr/share/{{ package_name }}/html
  
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
@@ -517,6 +517,8 @@ ansible -i inventory -m gather_facts --tree /tmp/facts
 The metadata output from gathering facts can be used as a variable in a similar fashion like a registered variable.
  
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
+ 
+</br>
 
 ### Variable Precedence
 We can check variable precedence in the Ansible documentation [here](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable).
