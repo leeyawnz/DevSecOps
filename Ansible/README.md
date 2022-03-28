@@ -404,6 +404,8 @@ Examples of valid variable names:
 > foo5 \
 > _foo
  
+</br>
+
 ### Using Variables
 ### 1. Specifying Inside Playbook
 We can specify variables and use them inside of our playbooks in this manner:
@@ -427,7 +429,7 @@ We can specify variables and use them inside of our playbooks in this manner:
 > \
 > E.g \
 > url: /usr/share/{{ package_name }}/html
- 
+
 ### 2. Creating a Variable File
 We can create a file for our variables as well.
 ```
