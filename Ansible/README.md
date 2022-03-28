@@ -24,7 +24,12 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 > - [Ansible Configuration](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#ansible-configuration)
 > - [Ad-hoc Commands](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#ad-hoc-commands)
 > - [Managing Variables](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#managing-variables)
->   - [Gathering Facts](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#gathering-facts)
+>   - [Creating Variables](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#creating-variables)
+>   - [Using Variables](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#using-variables)
+>     - [1. Specifying Inside Playbook](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#1-specifying-inside-playbook)
+>     - [2. Creating a Variable File](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#2-creating-a-variable-file)
+>     - [3. From a Registered Variable](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#3-from-a-registered-variable)
+>     - [4. Gathering Facts](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#gathering-facts)
 
 </br>
 
