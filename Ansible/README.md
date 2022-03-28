@@ -403,6 +403,8 @@ Examples of valid variable names:
 > foo_port \
 > foo5 \
 > _foo
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
  
 </br>
 
@@ -430,6 +432,8 @@ We can specify variables and use them inside of our playbooks in this manner:
 > \
 > E.g \
 > url: /usr/share/{{ package_name }}/html
+ 
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
 ### 2. Creating a Variable File
 We can create a file for our variables as well.
@@ -451,6 +455,7 @@ To use it in our playbooks, we have to add this file in the playbook in this man
     - apache2_vars
 [...]
 ```
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
 ### 3. From a Registered Variable
 After running a task, that task will output some metadata. We can save that metadata in a variable and call a specific metadata.
@@ -472,11 +477,10 @@ In this case, the debug module will only print out the specific checksum variabl
   debug:
     msg: "{{ index_file.checksum }}"
 ```
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
 ### 4. Gathering Facts
-This specific module is used to gather information about the inventory. We can use this information later to see which variable can be used for applying conditionals in our playbook file.
- 
-The command below displays facts from all hosts and stores them indexed by hostname at /tmp/facts.
+This specific module is used to gather information about the inventory. The command below displays facts from all hosts and stores them indexed by hostname at /tmp/facts.
 ```
 ansible -i inventory -m gather_facts --tree /tmp/facts
 ```
