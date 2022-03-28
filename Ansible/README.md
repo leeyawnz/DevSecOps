@@ -345,8 +345,8 @@ ansible-playbook playbook.yml
 > ```
 
 For a simple playbook set-up and execution, we can create a folder where it contains the following files:
-> ansible.cfg
-> inventory
+> ansible.cfg \
+> inventory \
 > playbook.yml
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
