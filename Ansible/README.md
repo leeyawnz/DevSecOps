@@ -303,11 +303,13 @@ A playbook contains several plays. This playbook is a YAML file.
 Below is an example of a playbook:
 ```
 - hosts: all
+  become: yes
   tasks:
     - name: Checking Connection
       ping: ~
 
 - hosts: all
+  become: yes
   tasks:
     - name: Installing Apache2
       apt:
@@ -368,6 +370,7 @@ ansible -i inventory all -m apt -a "name:httpd state:present"
 > ```
 > ansible -i <inventory> <inventory-group> -m <module> -a "<arguments>"
 > ```
-> Search for the specific module documentation as required
+> Search for the specific module documentation as required. \
+> May require to become root with the "-b" argument.
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
