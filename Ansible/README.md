@@ -555,3 +555,34 @@ vi playbook.yml
 ```
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
+
+## Conditionals
+Using conditionals, we can control how we want our playbook to run. We can also control how certain tasks affect specific servers and not other servers as well.
+
+### When
+Using the "when:" syntax in our YAML/YML file, 
+```
+- hosts: all
+  tasks:
+    - include: ubuntu.yml
+      when: ansible_os_family == "Ubuntu"
+    - include: rhel.yml
+      when: ansible_os_family == "RedHat"
+```
+> Note: \
+> ansible_os_family is a variable that is taken from gathering facts.
+
+ [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
+
+### Loop
+Should you require to run a specific task over and over again, we can use loops. Loops can be used in cases such as creating x amount of users, installing x amount of packages.
+
+```
+- name: Add Several Users
+  user:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - testuser1
+    - testuser2
+```
