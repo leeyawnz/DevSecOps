@@ -32,6 +32,7 @@ As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
 >     [4. From a Registered Variable](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#4-from-a-registered-variable) \
 >     [5. Gathering Facts](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#5-gathering-facts)
 >   - [Variable Precedence](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#variable-precedence)
+> - [Inclusions](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#inclusions)
 
 </br>
 
@@ -526,5 +527,31 @@ The metadata output from gathering facts can be used as a variable in a similar 
 
 ### Variable Precedence
 We can check variable precedence in the Ansible documentation [here](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable).
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
+
+## Inclusions
+We can pull files from other places to include them into our playbook as well. These files can contain variables, tasks or handlers.
+
+Create a file called ping.yml
+```
+vi ping.yml
+```
+```
+- name: Checking Connection
+  ping: ~
+```
+Create a playbook
+```
+vi playbook.yml
+```
+```
+---
+- hosts: all
+  gather_facts: yes
+  become: yes
+  tasks:
+    - include: ping.yml
+```
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
