@@ -446,10 +446,12 @@ We can specify variables and use them inside of our playbooks in this manner:
 - hosts: all
   become: yes
   vars:
-    - apache2_src: <path>
-    - apache2_dest: <path>
+    - apache2_src: global_variable1
+    - apache2_dest: global_variable2
   tasks:
     - name: Installing Apache2
+      set_fact:    # note that set_fact is required
+        task_vars: task_variable
       apt:
         name: apache2
         state: present
@@ -483,7 +485,8 @@ To use it in our playbooks, we have to add this file in the playbook in this man
   become: yes
   vars_files:
     - apache2_vars.yml
-[...]
+  tasks:
+    - include_vars: include_vars.yml
 ```
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
@@ -499,14 +502,15 @@ After running a task, that task will output some metadata. We can save that meta
   debug:
     msg: "{{ index_file }}"
 ```
-Using the debug module, we can print out all the metadata that the task will output and use it as a reference to use as variables. \
-In this case, the debug module will only print out the specific checksum variable output:
+Using the debug module, we can print out all the metadata that the task will output and use it as a reference to use as variables.
 ```
 [...]
 - name: Output index_file Variable Contents
   debug:
     msg: "{{ index_file.checksum }}"
 ```
+> In this case, the debug module will only print out the specific checksum variable output
+
 [Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Ansible/README.md#table-of-contents)
 
 ### 5. Gathering Facts
