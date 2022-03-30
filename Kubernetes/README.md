@@ -88,9 +88,10 @@ kubectl get services
 ```
 kubectl get deployment
 ```
+> pod-name/deployment-name allows us to target a component more specifically \
 > -A allows us to get information of everything \
 > -n <namespace> allows us to get information in a specific namespace \
-> -o wide gives us more details compared to the basic details
+> -o wide gives us more details compared to the basic details \
 > -o yaml shows us the YAML file relating to that particular component
 
 </br>
