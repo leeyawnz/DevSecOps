@@ -72,3 +72,74 @@ We can also check if a container is running:
 ```
 docker ps
 ```
+
+</br>
+
+## Getting Status of Different Components
+```
+kubectl get nodes
+```
+```
+kubectl get pods
+```
+```
+kubectl get services
+```
+
+## Create a Pod/Deployment
+```
+kubectl create deployment <name> --image=<imagename>
+```
+> e.g: \
+> ```
+> kubectl create deployment nginx-depl --image=nginx
+> ```
+
+```
+kubectl apply -f <config-file-name>.yml
+```
+> e.g: \
+> Create a file called nginx-deployment.yml
+> ```
+> vi nginx-deployment.yml
+> ```
+> Inside the file, copy the below information.
+> ```
+> apiVersion: apps/v1
+> kind: Deployment
+> metadata:
+>   name: nginx-deployment
+>   labels:
+>     app: nginx
+> spec:
+>   replicas: 1
+>   selector:
+>     matchLabels:
+>       app: nginx
+>     template:
+>       metadata:
+>         labels:
+>           app: nginx
+>         spec:
+>           containers:
+>           - name: nginx
+>             image: nginx:1.16
+>             ports:
+>             - containerPort: 80
+> ```
+> Let's apply the configuration.
+> ```
+> kubectl apply -f nginx-deployment.yml
+> ```
+> If the nginx-deployment.yml file has been changed and we run the apply command again, Kubernetes knows whether to create or update a new or existing deployment.
+
+## Debugging a Pod
+```
+kubectl logs <pod-name>
+```
+```
+kubectl describe pod <pod-name>
+```
+```
+kubectl exec -it <pod-name> -- bin/bash
+```
