@@ -86,8 +86,10 @@ kubectl get pods
 kubectl get services
 ```
 > -A allows us to get information of everything \
-> -n <namespace> allows us to get information in a specific namespace
+> -n <namespace> allows us to get information in a specific namespace \
 > -owide gives us more details compared to the basic details
+
+</br>
 
 ## Create a Pod/Deployment
 Using the command line, we can create a deployment. Pods are created via this deployment.
