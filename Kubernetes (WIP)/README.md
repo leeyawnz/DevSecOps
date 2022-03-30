@@ -5,10 +5,10 @@ Updated: Apr 2022
 </br>
 
 ## Table of Contents
-> - [Setting Up Kubernetes]()
->   - [Installing Kubectl]()
->   - [Installing Minikube]()
->   - [Installing Docker]()
+> - [Setting Up Kubernetes](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#setting-up-kubernetes)
+>   - [Installing Kubectl](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#installing-kubectl)
+>   - [Installing Minikube](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#installing-minikube)
+>   - [Installing Docker](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#installing-docker)
 
 </br>
 
@@ -37,6 +37,8 @@ Checking if Kubectl is properly installed:
 ```
 kubectl version --client
 ```
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
+
 ### Installing Minikube
 ```
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
@@ -48,5 +50,8 @@ Checking if Minikube is running:
 ```
 minikube start
 ```
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
+
 ### Installing Docker
-You can refer to the Docker installation [here](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker).
+You can refer to the Docker installation [here](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker). \
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
