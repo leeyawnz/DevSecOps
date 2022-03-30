@@ -82,11 +82,25 @@ kubectl get nodes
 ```
 kubectl get pods
 ```
+> To get status of all pods,
+> ```
+> kubectl get pods -A
+> ```
+> To get status of pods in a specific namespace,
+> ```
+> kubectl get pods -n <namespace>
+> ```
+> To get more information of the pods,
+> ```
+> kubctl get pods -owide
+> ```
+
 ```
 kubectl get services
 ```
 
 ## Create a Pod/Deployment
+Using the command line, we can create a deployment. Pods are created via this deployment.
 ```
 kubectl create deployment <name> --image=<imagename>
 ```
@@ -94,9 +108,13 @@ kubectl create deployment <name> --image=<imagename>
 > ```
 > kubectl create deployment nginx-depl --image=nginx
 > ```
-
+However, it is more efficient to create a deployment by applying a deployment YAML file.
+We can create/delete a deployment with the command below:
 ```
 kubectl apply -f <config-file-name>.yml
+```
+```
+kubectl delete -f <config-file-name>.yml
 ```
 > e.g: \
 > Create a file called nginx-deployment.yml
