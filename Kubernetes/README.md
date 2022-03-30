@@ -136,6 +136,8 @@ kubectl apply -f <config-file-name>.yml
 > If the nginx-deployment.yml file has been changed and we run the apply command again, Kubernetes knows whether to create a new deployment or to update an existing deployment.
 > > If an update is applied, we should get an output that says "deployment.apps/nginx-deployment configured"
 
+</br>
+
 ## Debugging a Pod
 ```
 kubectl logs <pod-name>
