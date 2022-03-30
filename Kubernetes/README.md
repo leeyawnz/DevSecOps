@@ -5,10 +5,10 @@ Updated: Apr 2022
 </br>
 
 ## Table of Contents
-> - [Setting Up Kubernetes](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#setting-up-kubernetes)
->   - [Installing Kubectl](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#installing-kubectl)
->   - [Installing Minikube](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#installing-minikube)
->   - [Installing Docker](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#installing-docker)
+> - [Setting Up Kubernetes](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#setting-up-kubernetes)
+>   - [Installing Kubectl](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-kubectl)
+>   - [Installing Minikube](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-minikube)
+>   - [Installing Docker](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-docker)
 
 </br>
 
