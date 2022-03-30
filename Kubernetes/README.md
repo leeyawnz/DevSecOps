@@ -82,22 +82,12 @@ kubectl get nodes
 ```
 kubectl get pods
 ```
-> To get status of all pods,
-> ```
-> kubectl get pods -A
-> ```
-> To get status of pods in a specific namespace,
-> ```
-> kubectl get pods -n <namespace>
-> ```
-> To get more information of the pods,
-> ```
-> kubctl get pods -owide
-> ```
-
 ```
 kubectl get services
 ```
+> -A allows us to get information of everything \
+> -n <namespace> allows us to get information in a specific namespace
+> -owide gives us more details compared to the basic details
 
 ## Create a Pod/Deployment
 Using the command line, we can create a deployment. Pods are created via this deployment.
