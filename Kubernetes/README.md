@@ -87,7 +87,7 @@ kubectl get services
 ```
 > -A allows us to get information of everything \
 > -n <namespace> allows us to get information in a specific namespace \
-> -owide gives us more details compared to the basic details
+> -o wide gives us more details compared to the basic details
 
 </br>
 
