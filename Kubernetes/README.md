@@ -90,7 +90,7 @@ kubectl get services
 ```
 kubectl create deployment <name> --image=<imagename>
 ```
-> e.g: \
+> e.g:
 > ```
 > kubectl create deployment nginx-depl --image=nginx
 > ```
