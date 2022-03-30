@@ -46,12 +46,29 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-
 ```
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
-Checking if Minikube is running:
-```
-minikube start
-```
+
 [Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
 
 ### Installing Docker
 You can refer to the Docker installation [here](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker). \
 [Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
+
+</br>
+
+## Creating and Starting a Cluster
+We can start a cluster using this command:
+```
+minikube start
+```
+> Note: Minikube is used to start/delete cluster
+To interact with the cluster, we use the kubectl command:
+```
+kubectl cluster-info
+```
+```
+kubectl get pods -A
+```
+We can also check if a container is running:
+```
+docker ps
+```
