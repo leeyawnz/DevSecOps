@@ -1,7 +1,16 @@
 # Kubernetes
-This is my own personal documentation of the common Docker commands. <br>As most OS are Linux in DevOps, this in the context of Linux (Ubuntu).
+This is my own personal documentation of the common Docker commands. <br>As most OS are Linux in DevOps, this in the context of Linux (Ubuntu). \
+Updated: Apr 2022
+
+</br>
 
 ## Table of Contents
+> - [Setting Up Kubernetes]()
+>   - [Installing Kubectl]()
+>   - [Installing Minikube]()
+>   - [Installing Docker]()
+
+</br>
 
 ## Setting Up Kubernetes
 ### Installing Kubectl
