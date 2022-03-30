@@ -158,3 +158,4 @@ kubectl describe pod <pod-name>
 ```
 kubectl exec -it <pod-name> -- bin/bash
 ```
+> If necessary, do include -n <namespace> for better identification of which specific pod you are targetting.
