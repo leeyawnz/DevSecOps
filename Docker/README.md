@@ -62,6 +62,12 @@ sudo apt-get update
 ```
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
+```
+systemctl start docker
+```
+```
+systemctl enable docker
+```
 
 Check if Docker is installed by running the command below or by checking the version.
 ```
