@@ -24,12 +24,20 @@ sudo apt-get update
 ```
 sudo apt-get install -y kubectl
 ```
+Checking if Kubectl is properly installed:
+```
+kubectl version --client
+```
 ### Installing Minikube
 ```
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 ```
 ```
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
+```
+Checking if Minikube is running:
+```
+minikube start
 ```
 ### Installing Docker
 You can refer to the Docker installation [here](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker).
