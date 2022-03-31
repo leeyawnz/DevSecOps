@@ -155,16 +155,16 @@ kubectl delete -f <config-file-name>.yml
 >   selector:
 >     matchLabels:
 >       app: nginx
->     template:
->       metadata:
->         labels:
->           app: nginx
->         spec:
->           containers:
->           - name: nginx
->             image: nginx:1.16
->             ports:
->             - containerPort: 80
+>   template:
+>     metadata:
+>       labels:
+>         app: nginx
+>     spec:
+>       containers:
+>       - name: nginx
+>         image: nginx:1.16
+>         ports:
+>         - containerPort: 80
 > ```
 > Let's apply the configuration.
 > ```
