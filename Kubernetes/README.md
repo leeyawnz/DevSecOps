@@ -97,10 +97,6 @@ kubectl get deployment
 </br>
 
 ## Create a Pod/Deployment
-
-```
-kubectl create pod <pod-name> --image=<imagename>
-```
 Creating a pod, we can use a YAML file as well.
 ```
 vi sample-pod.yml
