@@ -97,7 +97,23 @@ kubectl get deployment
 </br>
 
 ## Create a Pod/Deployment
-Using the command line, we can create a deployment. Pods are created via this deployment.
+```
+vi sample-pod.yml
+```
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+```
+
+Using the command line, we can create a deployment. Pods can also be created via deployment.
 ```
 kubectl create deployment <name> --image=<imagename>
 ```
