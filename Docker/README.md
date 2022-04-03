@@ -5,6 +5,7 @@ Updated: Apr 2022
 </br>
 
 ## Table of Contents:
+> - [Understanding Docker](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#understanding-docker)
 > - [Setting up Docker](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker)
 > - [Getting a Docker Image](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#getting-a-docker-image)
 > - [Creating and Running a Docker Container](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#creating-and-running-a-docker-container)
@@ -32,6 +33,15 @@ Updated: Apr 2022
 >    - [Docker Logs](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-logs)
 >    - [Docker Exec](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#docker-exec)
 >    - [Managing Unused Docker Resources](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#managing-unused-docker-resources)
+
+</br>
+
+## Understanding Docker
+Docker is created to containerize applications. The idea behind Docker is that it allows developers/operations to agree on a runtime environment with all the necessary dependencies that the application requires and we are able to save these information into an Image. This image makes sure that the environment remains the same in development and deployment. With the help of Docker, we are also able to share this image easily with anyone.
+
+Docker is centered around being lightweight and promotes consistency when developing and running an application.
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#table-of-contents)
 
 </br>
 
