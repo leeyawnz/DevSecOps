@@ -5,10 +5,18 @@ Updated: Apr 2022
 </br>
 
 ## Table of Contents
+> - [Understanding Kubernetes](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#understanding-kubernetes)
 > - [Setting Up Kubernetes](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#setting-up-kubernetes)
 >   - [Installing Kubectl](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-kubectl)
 >   - [Installing Minikube](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-minikube)
 >   - [Installing Docker](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-docker)
+
+</br>
+
+## Understanding Kubernetes
+Kubernetes is a container orchestration tool. As most applications are now moving towards containerization, managing multiple or a large number of containerized applications becomes difficult or even impossible. Kubernetes is able to help with managing these large number of containers with ease.
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
 
 </br>
 
