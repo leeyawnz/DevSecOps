@@ -90,6 +90,38 @@ docker ps
 
 </br>
 
+### Namespaces
+We can categorize different resources in different namespaces. This allows us to better segregated applications and resources. 
+
+We can create a namespace using the command line:
+```
+kubectl create namespace [namespace-name]
+```
+We can also use a YAML file to create a namespace: \
+E.g \
+Create a YAML file called namespace.yml
+```
+vi namespace.yml
+```
+Copy the following below:
+```
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: development
+```
+To create the namespace from the YAML file, run this command:
+```
+kubectl apply -f namespace.yml
+```
+To check if the namespace has been successfully created:
+```
+kubectl get namespaces
+```
+
+</br>
+
 ### Pods
 Pods are the smallest units in Kubernetes. A single Pod can consist of one or more containerized applications. Containers inside a pod tend to serve the same goal.
 
@@ -110,6 +142,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: nginx
+  namespace: development
   labels:
     app: nginx
 spec:
@@ -206,7 +239,7 @@ To create the deployment from the YAML file, run this command:
 kubectl apply -f service.yml
 ```
 
-
+In the example above, the port 80 belongs to the service and the targetPort 9376 
 
 
 </br>
