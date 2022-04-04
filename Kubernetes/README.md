@@ -10,6 +10,7 @@ Updated: Apr 2022
 >   - [Installing Kubectl](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-kubectl)
 >   - [Installing Minikube](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-minikube)
 >   - [Installing Docker](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-docker)
+> - [Kubernetes Components](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#kubernetes-components)
 
 </br>
 
@@ -62,6 +63,49 @@ You can refer to the Docker installation [here](https://github.com/leeyawnz/DevS
 [Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
 
 </br>
+
+## Kubernetes Components
+### Pods
+Pods are the smallest units in Kubernetes. A single Pod can consist of one or more containerized applications. Containers inside a pod tend to serve the same goal.
+
+We can create a pod using the command line:
+```
+kubectl run [pod-name] --image=[image-name] --restart=Never
+```
+We can also use a YAML file to create a pod: \
+E.g \
+Create a YAML file called pod.yml
+```
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: command-demo
+  labels:
+    purpose: demonstrate-command
+spec:
+  containers:
+  - name: command-demo-container
+    image: debian
+    command: ["printenv"]
+    args: ["HOSTNAME", "KUBERNETES_PORT"]
+  restartPolicy: OnFailure
+```
+To create the pod from the YAML file, run this command:
+```
+kubectl apply -f pod.yml
+```
+
+### Deployments
+Deployments provide declarative updates for pods. A deployment is typically a YAML file that is used to declare the configurations of a single pod. This pod can be replicated to as many replicas necessary. Any changes to this deployment YAML file will be used to update the pods under this deployment. We can also delete an entire deployment as well. 
+
+
+
+
+
+
+
+
 
 ## Creating and Starting a Cluster
 We can start a cluster using this command:
