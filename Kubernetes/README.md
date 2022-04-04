@@ -109,16 +109,15 @@ Copy the following below:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: command-demo
+  name: nginx
   labels:
-    purpose: demonstrate-command
+    app: nginx
 spec:
   containers:
-  - name: command-demo-container
-    image: debian
-    command: ["printenv"]
-    args: ["HOSTNAME", "KUBERNETES_PORT"]
-  restartPolicy: OnFailure
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
 ```
 To create the pod from the YAML file, run this command:
 ```
@@ -130,9 +129,11 @@ kubectl apply -f pod.yml
 ### Deployments
 Deployments provide declarative updates for pods. A deployment is typically a YAML file that is used to declare the configurations of a single pod. This pod can be replicated to as many replicas necessary. Any changes to this deployment YAML file will be used to update the pods under this deployment. We can also delete an entire deployment as well.
 
+Deployment YAML files will contain information by which, the deployment will know which pods belongs to which deployment using metadata. This connection is made using the labels and matchLabels key-value pairs.
+
 We can create a deployment using the command line:
 ```
-kubectl create deployment nginx-depl --image=nginx:1.19
+kubectl create deployment [deployment-name] --image=[image-name]
 ```
 
 We can also use a YAML file to create a deployment: \
@@ -170,10 +171,40 @@ To create the deployment from the YAML file, run this command:
 ```
 kubectl apply -f deployment.yml
 ```
+If there are any changes made to the original deployment.yml, we can use the same apply command to apply the updates to the deployment.
 
+</br>
 
+### Service
+Each pod upon creation is given an IP address and this IP address is used for pods to talk to one another. However, pods are ephemeral. They die easily and when a pod is newly created again, the IP address changes and this is troublesome. So we use Service.
 
+Service is a resource that consolidates all the pods that serves the same function and collates their IP addresses in one place. If a pod dies and a new pod is created, the Service will be able to remove the old unused IP address and add the new IP address inside.
 
+Using Service and replicas, we are able to direct connections to existing replicas while a new one is recreating. Usually, a service YAML file is written together in the same file as the deployment YAML file. Using metadata, the service will know which deployment it should be connected to as well. This connection is made using the selector and labels key-value pairs.
+
+Create a YAML file named service.yml
+```
+vi service.yml
+```
+Copy the following below:
+```
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    app: MyApp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
+```
+To create the deployment from the YAML file, run this command:
+```
+kubectl apply -f service.yml
+```
 
 
 
