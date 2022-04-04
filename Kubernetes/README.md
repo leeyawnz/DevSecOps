@@ -97,7 +97,7 @@ We can create a namespace using the command line:
 ```
 kubectl create namespace [namespace-name]
 ```
-We can also use a YAML file to create a namespace: \
+We can also use a YAML file to create a namespace:
 1. Create a YAML file called namespace.yml
 ```
 vi namespace.yml
