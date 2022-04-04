@@ -11,6 +11,10 @@ Updated: Apr 2022
 >   - [Installing Minikube](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-minikube)
 >   - [Installing Docker](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-docker)
 > - [Kubernetes Resources](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#kubernetes-resources)
+>   - [Cluster](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#cluster)
+>   - [Namespaces](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#namespaces)
+>   - [Pods](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#pods)
+>   - [Deployments](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#deployments)
 
 </br>
 
@@ -176,19 +180,23 @@ We can create a deployment using the command line:
 kubectl create deployment [deployment-name] --image=[image-name]
 ```
 
-We can also use a YAML file to create a deployment: \
-E.g \
-Create a YAML file called deployment.yml
+We can also use a YAML file to create a deployment:
+1. Create a namespace called nginx
+```
+kubectl create namespace nginx
+```
+2. Create a YAML file called deployment.yml
 ```
 vi deployment.yml
 ```
-Copy the following below:
+3. Copy the following below:
 ```
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  namespace: nginx
   labels:
     app: nginx
 spec:
@@ -207,11 +215,18 @@ spec:
         ports:
         - containerPort: 80
 ```
-To create the deployment from the YAML file, run this command:
+4. To create the deployment from the YAML file, run this command:
 ```
 kubectl apply -f deployment.yml
 ```
-If there are any changes made to the original deployment.yml, we can use the same apply command to apply the updates to the deployment.
+5. To check if the deployment has been successfully applied:
+```
+kubectl get deployments
+```
+```
+kubectl get pods
+```
+> NOTE: If there are any changes made to the original deployment.yml, we can use the same apply command to apply the updates to the deployment.
 
 </br>
 
@@ -241,7 +256,7 @@ spec:
       port: 80
       targetPort: 9376
 ```
-To create the deployment from the YAML file, run this command:
+To create the service from the YAML file, run this command:
 ```
 kubectl apply -f service.yml
 ```
