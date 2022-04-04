@@ -68,7 +68,9 @@ You can refer to the Docker installation [here](https://github.com/leeyawnz/DevS
 ### Cluster
 A Kubernetes cluster is a set of nodes that run containerized applications. We need to create a cluster first before we can do anything within the cluster.
 > Do note that we are using Minikube here. This is a test environment and not a production environment.
+
 </br>
+
 We can start a cluster using this command:
 ```
 minikube start
