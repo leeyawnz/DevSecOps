@@ -162,7 +162,7 @@ kubectl apply -f pod.yml
 ```
 kubectl get pods -n development
 ```
-> To create a pod in a specific namespace, the namespace must exist first.
+> NOTE: To create a pod in a specific namespace, the namespace must exist first.
 
 </br>
 
