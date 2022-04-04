@@ -91,6 +91,7 @@ We can also check if a container is running:
 ```
 docker ps
 ```
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
 
 </br>
 
@@ -122,6 +123,7 @@ kubectl apply -f namespace.yml
 ```
 kubectl get namespaces
 ```
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
 
 </br>
 
@@ -167,6 +169,7 @@ kubectl apply -f pod.yml
 kubectl get pods -n development
 ```
 > NOTE: To create a pod in a specific namespace, the namespace must exist first.
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
 
 </br>
 
@@ -227,6 +230,7 @@ kubectl get deployments
 kubectl get pods
 ```
 > NOTE: If there are any changes made to the original deployment.yml, we can use the same apply command to apply the updates to the deployment.
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
 
 </br>
 
