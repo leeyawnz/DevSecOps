@@ -98,12 +98,11 @@ We can create a namespace using the command line:
 kubectl create namespace [namespace-name]
 ```
 We can also use a YAML file to create a namespace: \
-E.g \
-Create a YAML file called namespace.yml
+1. Create a YAML file called namespace.yml
 ```
 vi namespace.yml
 ```
-Copy the following below:
+2. Copy the following below:
 ```
 ---
 apiVersion: v1
@@ -111,11 +110,11 @@ kind: Namespace
 metadata:
   name: development
 ```
-To create the namespace from the YAML file, run this command:
+3. To create the namespace from the YAML file, run this command:
 ```
 kubectl apply -f namespace.yml
 ```
-To check if the namespace has been successfully created:
+4. To check if the namespace has been successfully created:
 ```
 kubectl get namespaces
 ```
