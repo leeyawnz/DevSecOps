@@ -10,7 +10,7 @@ Updated: Apr 2022
 >   - [Installing Kubectl](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-kubectl)
 >   - [Installing Minikube](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-minikube)
 >   - [Installing Docker](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#installing-docker)
-> - [Kubernetes Components](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#kubernetes-components)
+> - [Kubernetes Resources](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#kubernetes-resources)
 
 </br>
 
@@ -64,7 +64,30 @@ You can refer to the Docker installation [here](https://github.com/leeyawnz/DevS
 
 </br>
 
-## Kubernetes Components
+## Kubernetes Resources
+### Cluster
+A Kubernetes cluster is a set of nodes that run containerized applications. We need to create a cluster first before we can do anything within the cluster. \
+> Do note that we are using Minikube here. This is a test environment and not a production environment.
+
+We can start a cluster using this command:
+```
+minikube start
+```
+> Note: Minikube is used to start/delete cluster
+To interact with the cluster, we use the kubectl command:
+```
+kubectl cluster-info
+```
+```
+kubectl get pods -A
+```
+We can also check if a container is running:
+```
+docker ps
+```
+
+</br>
+
 ### Pods
 Pods are the smallest units in Kubernetes. A single Pod can consist of one or more containerized applications. Containers inside a pod tend to serve the same goal.
 
@@ -75,6 +98,10 @@ kubectl run [pod-name] --image=[image-name] --restart=Never
 We can also use a YAML file to create a pod: \
 E.g \
 Create a YAML file called pod.yml
+```
+vi pod.yml
+```
+Copy the following below:
 ```
 ---
 apiVersion: v1
@@ -96,34 +123,58 @@ To create the pod from the YAML file, run this command:
 kubectl apply -f pod.yml
 ```
 
+</br>
+
 ### Deployments
-Deployments provide declarative updates for pods. A deployment is typically a YAML file that is used to declare the configurations of a single pod. This pod can be replicated to as many replicas necessary. Any changes to this deployment YAML file will be used to update the pods under this deployment. We can also delete an entire deployment as well. 
+Deployments provide declarative updates for pods. A deployment is typically a YAML file that is used to declare the configurations of a single pod. This pod can be replicated to as many replicas necessary. Any changes to this deployment YAML file will be used to update the pods under this deployment. We can also delete an entire deployment as well.
 
-
-
-
-
-
-
-
-
-## Creating and Starting a Cluster
-We can start a cluster using this command:
+We can create a deployment using the command line:
 ```
-minikube start
+kubectl create deployment nginx-depl --image=nginx:1.19
 ```
-> Note: Minikube is used to start/delete cluster
-To interact with the cluster, we use the kubectl command:
+
+We can also use a YAML file to create a deployment: \
+E.g \
+Create a YAML file called deployment.yml
 ```
-kubectl cluster-info
+vi deployment.yml
 ```
+Copy the following below:
 ```
-kubectl get pods -A
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
 ```
-We can also check if a container is running:
+To create the deployment from the YAML file, run this command:
 ```
-docker ps
+kubectl apply -f deployment.yml
 ```
+
+
+
+
+
+
+
 
 </br>
 
