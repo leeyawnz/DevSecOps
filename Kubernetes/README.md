@@ -128,13 +128,16 @@ We can create a pod using the command line:
 ```
 kubectl run [pod-name] --image=[image-name] --restart=Never
 ```
-We can also use a YAML file to create a pod: \
-E.g \
-Create a YAML file called pod.yml
+We can also use a YAML file to create a pod:
+1. Create a namespace
+```
+kubectl create namespace development
+```
+2. Create a YAML file called pod.yml
 ```
 vi pod.yml
 ```
-Copy the following below:
+3. Copy the following below:
 ```
 ---
 apiVersion: v1
@@ -151,10 +154,15 @@ spec:
     ports:
     - containerPort: 80
 ```
-To create the pod from the YAML file, run this command:
+4. To create the pod from the YAML file, run this command:
 ```
 kubectl apply -f pod.yml
 ```
+5. To check if the pod has been successfully created:
+```
+kubectl get pods -n development
+```
+> To create a pod in a specific namespace, the namespace must exist first.
 
 </br>
 
