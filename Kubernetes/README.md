@@ -18,6 +18,8 @@ Updated: Apr 2022
 >   - [Services](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#services)
 >   - [ConfigMaps](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#configmaps)
 >   - [Secrets](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#secrets)
+> - [Getting Status of Different Resources](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#getting-status-of-different-resources)
+> - [Debugging a Pod](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#debugging-a-pod)
 
 </br>
 
@@ -354,7 +356,7 @@ kubectl apply -f secret.yml
 
 </br>
 
-## Getting Status of Different Components
+## Getting Status of Different Resources
 ```
 kubectl get <resource-type>
 ```
