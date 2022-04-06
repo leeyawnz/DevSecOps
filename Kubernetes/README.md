@@ -417,6 +417,21 @@ sudo vim /etc/hosts
 > ingress.ip.address    domainname.com
 > ```
 
+> We can also configure an ingress to include a tls certificate for secure connection (HTTPS)
+> ```
+> [...]
+> spec:
+>   tls:
+>   - hosts:
+>     - myapp.com
+>     secretName: myapp-secret-tls
+> ```
+> At the secret section, for tls, the type is type: kubernetes.io/tls
+> 
+> Also, the certificate and key names in the secret has to be "tls.crt" and "tls.key" respectively.
+> 
+> NOTE: The secret and the ingress has to be in the same namespace.
+
 [Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
 
 </br>
