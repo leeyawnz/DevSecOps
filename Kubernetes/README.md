@@ -417,6 +417,9 @@ sudo vim /etc/hosts
 > ingress.ip.address    domainname.com
 > ```
 
+</br>
+
+> ADDITONAL INFO: \
 > We can also configure an ingress to include a tls certificate for secure connection (HTTPS)
 > ```
 > [...]
