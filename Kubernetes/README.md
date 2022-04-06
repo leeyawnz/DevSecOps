@@ -324,6 +324,13 @@ data:
   mongo-root-username: dXN1cm5hbWU=
   mongo-root-password: cGFzc3dvcmQ=
 ```
+> We can base64 encode our username and password by running this command:
+> ```
+> echo -n 'username' | base64
+> ```
+> ```
+> echo -n 'password' | base64
+> ```
 3. To create a secret from the YAML file, run this command:
 ```
 kubectl apply -f secret.yml
