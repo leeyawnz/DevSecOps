@@ -26,7 +26,7 @@ Updated: Apr 2022
 ## Understanding Kubernetes
 Kubernetes is a container orchestration tool. As most applications are now moving towards containerization, managing multiple or a large number of containerized applications becomes difficult or even impossible. Kubernetes is able to help with managing these large number of containers with ease.
 
-[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
 
 </br>
 
@@ -55,7 +55,7 @@ Checking if Kubectl is properly installed:
 ```
 kubectl version --client
 ```
-[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
 
 ### Installing Minikube
 ```
@@ -65,11 +65,11 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
 
-[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
 
 ### Installing Docker
 You can refer to the Docker installation [here](https://github.com/leeyawnz/DevSecOps/blob/main/Docker/README.md#setting-up-docker). \
-[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
 
 </br>
 
@@ -96,7 +96,7 @@ We can also check if a container is running:
 ```
 docker ps
 ```
-[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
 
 </br>
 
@@ -128,7 +128,7 @@ kubectl apply -f namespace.yml
 ```
 kubectl get namespaces
 ```
-[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
 
 </br>
 
@@ -175,7 +175,7 @@ kubectl get pods -n development
 ```
 > NOTE: To create a pod in a specific namespace, the namespace must exist first.
 
-[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
 
 </br>
 
@@ -237,7 +237,7 @@ kubectl get pods
 ```
 > NOTE: If there are any changes made to the original deployment.yml, we can use the same apply command to apply the updates to the deployment.
 
-[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes%20(WIP)#table-of-contents)
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
 
 </br>
 
@@ -274,6 +274,8 @@ kubectl apply -f service.yml
 ```
 > In the example above, the port 8081 belongs to the service and the targetPort 80 
 
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
+
 </br>
 
 ### ConfigMaps
@@ -306,6 +308,8 @@ kubectl apply -f configmap.yml
 >     name: mongodb-configmap
 >     key: database_url
 > ```
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
 
 </br>
 
@@ -354,6 +358,8 @@ kubectl apply -f secret.yml
 >     key: mongo-root-password
 > ```
 
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
+
 </br>
 
 ## Getting Status of Different Resources
@@ -365,6 +371,8 @@ kubectl get <resource-type>
 > -n <namespace> allows us to get information in a specific namespace \
 > -o wide gives us more details compared to the basic details \
 > -o yaml shows us the YAML file relating to that particular component
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
 
 </br>
 
@@ -382,3 +390,5 @@ kubectl exec -it <pod-name> -- bin/bash
 kubectl get events
 ```
 > If necessary, do include -n <namespace> for better identification of which specific pod you are targetting.
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
