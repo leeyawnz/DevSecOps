@@ -400,6 +400,8 @@ spec:
         serviceName: myapp-internal-service
         servicePort: 8080
 ```
+> The serviceName should point to the name in the service you created under the service's metadata's name. \
+> The servicePort should point to the service's port as well.
 3. To create a secret from the YAML file, run this command:
 ```
 kubectl apply -f ingress.yml
@@ -410,11 +412,8 @@ sudo vim /etc/hosts
 ```
 > Under the last line of the file, add:
 > ```
-> ingress.ip.address &nbsp; &nbsp; domainname.com
+> ingress.ip.address &nbsp;&nbsp; domainname.com
 > ```
-> 
-> The serviceName should point to the name in the service you created under the service's metadata's name. \
-> The servicePort should point to the service's port as well.
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
 
