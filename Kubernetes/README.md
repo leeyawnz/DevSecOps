@@ -431,7 +431,7 @@ sudo vim /etc/hosts
 > ```
 > At the secret section, for tls, the type is type: kubernetes.io/tls
 > 
-> Also, the certificate and key names in the secret has to be "tls.crt" and "tls.key" respectively.
+> Also, under data, the certificate and key variables in the secret YAML file has to be "tls.crt" and "tls.key" respectively.
 > 
 > NOTE: The secret and the ingress has to be in the same namespace.
 
