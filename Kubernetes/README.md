@@ -272,7 +272,7 @@ spec:
 ```
 kubectl apply -f service.yml
 ```
-> In the example above, the port 8081 belongs to the service and the targetPort 80
+> In the example above, the port 8081 belongs to the service and the targetPort 80 \
 > NOTE: We can create different types of service. By default, a created service is an internal service. We can specify the service type by adding a key-value pair under the specs section
 > ```
 > [...]
