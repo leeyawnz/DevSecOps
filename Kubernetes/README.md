@@ -356,103 +356,13 @@ kubectl apply -f secret.yml
 
 ## Getting Status of Different Components
 ```
-kubectl get nodes
-```
-```
-kubectl get pods
-```
-```
-kubectl get services
-```
-```
-kubectl get deployment
+kubectl get <resource-type>
 ```
 > pod-name/deployment-name allows us to target a component more specifically \
 > -A allows us to get information of everything \
 > -n <namespace> allows us to get information in a specific namespace \
 > -o wide gives us more details compared to the basic details \
 > -o yaml shows us the YAML file relating to that particular component
-
-</br>
-
-## Create a Pod/Deployment
-```
-kubectl run <pod-name> --image=<imagename>
-```
-> You can also add -n <namespace> to specify where the pod should be created.
-Creating a pod, we can use a YAML file as well.
-```
-vi sample-pod.yml
-```
-```
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx
-spec:
-  containers:
-  - name: nginx
-    image: nginx:1.14.2
-    ports:
-    - containerPort: 80
-```
-```
-kubectl apply -f sample-pod.yml
-```
-
-Using the command line, we can create a deployment. Pods can also be created via deployment.
-```
-kubectl create deployment <deployment-name> --image=<imagename>
-```
-> e.g:
-> ```
-> kubectl create deployment nginx-depl --image=nginx
-> ```
-However, it is more efficient to create a deployment by applying a deployment YAML file.
-We can create/delete a deployment with the command below:
-```
-kubectl apply -f <config-file-name>.yml
-```
-```
-kubectl delete -f <config-file-name>.yml
-```
-> e.g: \
-> Create a file called nginx-deployment.yml
-> ```
-> vi nginx-deployment.yml
-> ```
-> Inside the file, copy the below information.
-> ```
-> apiVersion: apps/v1
-> kind: Deployment
-> metadata:
->   name: nginx-deployment
->   labels:
->     app: nginx
-> spec:
->   replicas: 1
->   selector:
->     matchLabels:
->       app: nginx
->   template:
->     metadata:
->       labels:
->         app: nginx
->     spec:
->       containers:
->       - name: nginx
->         image: nginx:1.16
->         ports:
->         - containerPort: 80
-> ```
-> Let's apply the configuration.
-> ```
-> kubectl apply -f nginx-deployment.yml
-> ```
-> > We should get an output that says "deployment.apps/nginx-deployment created"
-> 
-> If the nginx-deployment.yml file has been changed and we run the apply command again, Kubernetes knows whether to create a new deployment or to update an existing deployment.
-> > If an update is applied, we should get an output that says "deployment.apps/nginx-deployment configured"
 
 </br>
 
