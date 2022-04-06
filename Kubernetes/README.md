@@ -18,6 +18,8 @@ Updated: Apr 2022
 >   - [Services](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#services)
 >   - [ConfigMaps](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#configmaps)
 >   - [Secrets](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#secrets)
+>   - [Ingress](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#ingress)
+>   - [Volumes](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#volumes)
 > - [Getting Status of Different Resources](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#getting-status-of-different-resources)
 > - [Debugging a Pod](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#debugging-a-pod)
 
