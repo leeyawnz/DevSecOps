@@ -370,6 +370,63 @@ kubectl apply -f secret.yml
 
 </br>
 
+### Ingress
+With ingress, we are able to use an actual domain name to access the application. Ingress provides routing rules which can redirect the user to different applications using different routing paths.
+
+To use ingress, we need an ingress controller.
+
+We can get an ingress controller in Minikube using the following command:
+```
+minikube addons enable ingress
+```
+We can create an ingress using a YAML file:
+1. Create a YAML file named ingress.yml
+```
+vi ingress.yml
+```
+2. Copy the following below:
+```
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: myapp-ingress
+spec:
+  rules:
+  - host: myapp.com
+    http:
+      paths:
+      - backend:
+        serviceName: myapp-internal-service
+        servicePort: 8080
+```
+3. To create a secret from the YAML file, run this command:
+```
+kubectl apply -f ingress.yml
+```
+4. Edit our /etc/hosts file
+```
+sudo vim /etc/hosts
+```
+> Under the last line of the file, add:
+> ```
+> ingress.ip.address &nbsp; &nbsp; domainname.com
+> ```
+> 
+> The serviceName should point to the name in the service you created under the service's metadata's name. \
+> The servicePort should point to the service's port as well.
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
+
+</br>
+
+### Volumes
+
+
+[Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
+
+</br>
+
 ## Getting Status of Different Resources
 ```
 kubectl get <resource-type>
