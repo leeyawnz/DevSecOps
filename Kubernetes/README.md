@@ -243,11 +243,12 @@ Service is a resource that consolidates all the pods that serves the same functi
 
 Using Service and replicas, we are able to direct connections to existing replicas while a new one is recreating. Usually, a service YAML file is written together in the same file as the deployment YAML file. Using metadata, the service will know which deployment it should be connected to as well. This connection is made using the selector and labels key-value pairs.
 
-Create a YAML file named service.yml
+We can use a YAML to create a service:
+1. Create a YAML file named service.yml
 ```
 vi service.yml
 ```
-Copy the following below:
+2. Copy the following below:
 ```
 ---
 apiVersion: v1
@@ -259,16 +260,87 @@ spec:
     app: MyApp
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 9376
+      port: 8081
+      targetPort: 80
 ```
-To create the service from the YAML file, run this command:
+3. To create the service from the YAML file, run this command:
 ```
 kubectl apply -f service.yml
 ```
+> In the example above, the port 8081 belongs to the service and the targetPort 80 
 
-In the example above, the port 80 belongs to the service and the targetPort 9376 
+</br>
 
+### ConfigMap
+Using a ConfigMap resource, we are able to store variables that our deployments can take reference from. 
+
+We can create a configmap using a YAML file:
+1. Create a YAML file named configmap.yml
+```
+vi configmap.yml
+```
+2. Copy the following below:
+```
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongodb-configmap
+data:
+  database_url: mongodb_service
+```
+3. To create the configmap from the YAML file, run this command:
+```
+kubectl apply -f configmap.yml
+```
+> Now we can use the variable "database_url" in our deployment YAML files
+> ```
+> [...]
+> valueFrom:
+>   configMapKeyRef:
+>     name: mongodb-configmap
+>     key: database_url
+> ```
+
+</br>
+
+### Secret
+Using a Secret resource, we are able to store variables that our deployment needs to take reference from but DO NOT want people to know what the actual value is. This is useful for admin/password values. These values have to be base64 encoded as well.
+
+We can create a secret using a YAML file:
+1. Create a YAML file named secret.yml
+```
+vi secret.yml
+```
+2. Copy the following below:
+```
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mongodb-secret
+type: Opaque
+data:
+  mongo-root-username: dXN1cm5hbWU=
+  mongo-root-password: cGFzc3dvcmQ=
+```
+3. To create a secret from the YAML file, run this command:
+```
+kubectl apply -f secret.yml
+```
+4. Now we can use the variable "mongo-root-username" and "mongo-root-password" in our deployment files.
+> ```
+> [...]
+> valueFrom:
+>   secretKeyRef:
+>     name: mongo-secret
+>     key: mongo-root-username
+> [...]
+> valueFrom:
+>   secretKeyRef:
+>     name: mongo-secret
+>     key: mongo-root-password
+> ```
 
 </br>
 
