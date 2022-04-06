@@ -412,7 +412,7 @@ sudo vim /etc/hosts
 ```
 > Under the last line of the file, add:
 > ```
-> ingress.ip.address &nbsp;&nbsp; domainname.com
+> ingress.ip.address    domainname.com
 > ```
 
 [Back to Top](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#table-of-contents)
