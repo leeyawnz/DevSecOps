@@ -15,6 +15,9 @@ Updated: Apr 2022
 >   - [Namespaces](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#namespaces)
 >   - [Pods](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#pods)
 >   - [Deployments](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#deployments)
+>   - [Services](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#services)
+>   - [ConfigMaps](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#configmaps)
+>   - [Secrets](https://github.com/leeyawnz/DevSecOps/tree/main/Kubernetes#secrets)
 
 </br>
 
@@ -236,7 +239,7 @@ kubectl get pods
 
 </br>
 
-### Service
+### Services
 Each pod upon creation is given an IP address and this IP address is used for pods to talk to one another. However, pods are ephemeral. They die easily and when a pod is newly created again, the IP address changes and this is troublesome. So we use Service.
 
 Service is a resource that consolidates all the pods that serves the same function and collates their IP addresses in one place. If a pod dies and a new pod is created, the Service will be able to remove the old unused IP address and add the new IP address inside.
@@ -271,7 +274,7 @@ kubectl apply -f service.yml
 
 </br>
 
-### ConfigMap
+### ConfigMaps
 Using a ConfigMap resource, we are able to store variables that our deployments can take reference from. 
 
 We can create a configmap using a YAML file:
@@ -304,7 +307,7 @@ kubectl apply -f configmap.yml
 
 </br>
 
-### Secret
+### Secrets
 Using a Secret resource, we are able to store variables that our deployment needs to take reference from but DO NOT want people to know what the actual value is. This is useful for admin/password values. These values have to be base64 encoded as well.
 
 We can create a secret using a YAML file:
