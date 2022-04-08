@@ -297,7 +297,7 @@ vi Dockerfile
 > RUN - command triggers while building the Docker image \
 > CMD - command triggers after the image has been built and launched, can be overwritten \
 > ENTRYPOINT - default command that will run regardless, cannot be overwritten \
-> EXpose - exposing a container port
+> EXPOSE - exposing a container port
 > \
 > ENTRYPOINT vs CMD \
 > e.g \
