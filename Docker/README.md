@@ -468,7 +468,7 @@ docker push username/repo-name:tagname
 
 ## Debugging Docker Containers
 ### Docker Inspect
-Using the docker inspect command, we can gain access to informmation of a specific container.
+Using the docker inspect command, we can gain access to information of a specific container.
 ```
 docker inspect <container-id/container-name>
 ```
